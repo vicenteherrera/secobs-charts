@@ -1,7 +1,8 @@
 
-
 .PHONY: all
-all: install download_charts_info evaluate postprocess
+all: install download_charts_info generate evaluate postprocess push
+
+# Preparation --------------------------------------------------------
 
 .PHONY: prerequisites
 prerequisites:
@@ -15,9 +16,15 @@ install:
 	mkdir -p ./result/cache
 	mkdir -p ./result/docs
 
+# Execution --------------------------------------------------------
+
 .PHONY: download_charts_info
 download_charts_info:
 	helm search hub -o yaml > result/charts_ah_source.yaml
+
+.PHONY: generate
+generate:
+	poetry run python3 src/charts_eval/main.py generate
 
 .PHONY: evaluate
 evaluate:
@@ -42,8 +49,8 @@ full-reset: reset-db reset-cache
 
 # Commit docs ---------------------------------------------------
 
-.PHONY: push-gen-docs
-push-gen-docs:
+.PHONY: push
+push:
 	git pull
 	git add ../docs/generated/*
 	git commit -m "Updated generated docs chart evaluation $(shell date +'%Y-%m-%d %H:%M:%S')"

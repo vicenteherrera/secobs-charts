@@ -2,7 +2,7 @@
 import sys
 import sys
 
-from charts_eval.evaluation.evaluate import evaluate
+from charts_eval.evaluation.evaluate import evaluate_tools, generate_templates
 from charts_eval.postprocess.generate_docs import generate_docs
 
 def help():
@@ -21,8 +21,10 @@ def cli(args=None):
 
     command = args[0]
 
-    if (command == 'evaluate'):
-        evaluate()
+    if (command == 'generate'):
+        generate_templates()
+    elif (command == 'evaluate'):
+        evaluate_tools()
     elif (command == 'postprocess'):
         generate_docs()
     else:
