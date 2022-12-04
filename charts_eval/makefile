@@ -12,7 +12,7 @@ prerequisites:
 
 .PHONY: install
 install:
-	curl -fsSL https://github.com/vicenteherrera/psa-checker/main/install/install.sh | INSTALL_DIR=$$GOPATH/bin bash
+	curl -fsSL https://raw.githubusercontent.com/vicenteherrera/psa-checker/main/install/install.sh | INSTALL_DIR=$$GOPATH/bin bash
 	poetry install
 	mkdir -p ./result/cache
 
