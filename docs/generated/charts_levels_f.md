@@ -1,5 +1,5 @@
 [Go to root documentation](https://vicenteherrera.com/secobs-charts)  
-[Go to index of charts evaluation](https://vicenteherrera.com/secobs-charts/docs/generated/charts_levels.md)
+[Go to index of charts evaluation](https://vicenteherrera.com/secobs-charts/docs/generated/charts_levels)
 
 ## Artifact Hub's Helm charts evaluation
 

@@ -23,7 +23,7 @@ More tools and evaluations will be added very soon.
 
 Visit this page to see the generated documentation for results on the evaluation of all charts:
 
-* **[HELM CHARTS EVALUATION RESULTS](https://vicenteherrera.com/secobs-charts/docs/generated/charts_levels.md)**
+* **[HELM CHARTS EVALUATION RESULTS](https://vicenteherrera.com/secobs-charts/docs/generated/charts_levels)**
 
 A WIP Jupyter Notebook will provide results that you can interact with in the near future, check its state here:
 

@@ -80,7 +80,7 @@ def generate_docs():
         # print( "# ["+ str(i) + "/" + str(len(charts_pss))+ "] " + dic_chart["repository"]["name"] + level)
 
     header = "[Go to root documentation](https://vicenteherrera.com/secobs-charts)  \n"
-    header += "[Go to index of charts evaluation](https://vicenteherrera.com/secobs-charts/docs/generated/charts_levels.md)\n\n"
+    header += "[Go to index of charts evaluation](https://vicenteherrera.com/secobs-charts/docs/generated/charts_levels)\n\n"
     header += "## Artifact Hub's Helm charts evaluation\n\n"
     date = "Evaluation date: " + date + "\n"
     list_md = open(doc_filename_prefix+".md", "w")
