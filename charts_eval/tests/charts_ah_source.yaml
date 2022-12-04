@@ -1,0 +1,71 @@
+- app_version: fedora-32
+  description: 389 Directory Server
+  repository:
+    name: gabibbo97
+    url: https://gabibbo97.github.io/charts/
+  url: https://artifacthub.io/packages/helm/gabibbo97/389ds
+  version: 0.1.0
+- app_version: 3.10.26
+  description: A Helm chart for 4ALLPORTAL version 3.10.0 and up
+  repository:
+    name: four-allportal
+    url: https://4allportal.github.io/helm-charts
+  url: https://artifacthub.io/packages/helm/four-allportal/4allportal
+  version: 19.0.8
+- app_version: 1.8.13
+  description: Deploy components for aad-pod-identity
+  repository:
+    name: aad-pod-identity
+    url: https://raw.githubusercontent.com/Azure/aad-pod-identity/master/charts
+  url: https://artifacthub.io/packages/helm/aad-pod-identity/aad-pod-identity
+  version: 4.1.14
+- app_version: ""
+  description: ONAP Application Authorization Framework
+  repository:
+    name: smo-helm-chart
+    url: https://pinknemo452.github.io/smo-helm-charts/
+  url: https://artifacthub.io/packages/helm/smo-helm-chart/aaf
+  version: 6.0.0
+- app_version: ""
+  description: ONAP Active and Available Inventory
+  repository:
+    name: smo-helm-chart
+    url: https://pinknemo452.github.io/smo-helm-charts/
+  url: https://artifacthub.io/packages/helm/smo-helm-chart/aai
+  version: 6.0.0
+- app_version: "1.0"
+  description: A Helm chart for AAW Financial Data Reconciliation
+  repository:
+    name: statcan
+    url: https://statcan.github.io/charts
+  url: https://artifacthub.io/packages/helm/statcan/aaw-financial-data-reconciliation
+  version: 0.1.5
+- app_version: latest
+  description: Network Manager Living at Edge
+  repository:
+    name: arhatdev
+    url: https://helm-charts.arhat.dev
+  url: https://artifacthub.io/packages/helm/arhatdev/abbot
+  version: 0.1.0
+- app_version: 1.16.0
+  description: A Helm chart for running Cassandra on Kuberentes with prometheus metrics.
+  repository:
+    name: cassandra-lightweight
+    url: https://abhijithganesh.github.io/helm-cassandra/
+  url: https://artifacthub.io/packages/helm/cassandra-lightweight/abhijith-ganesh's-lightweight-cassandra-chart-for-stateful-workloads
+  version: 0.1.1
+- app_version: latest
+  description: A Helm chart for SEBA's Abstract OLT layer
+  repository:
+    name: opencord
+    url: https://charts.opencord.org/
+  url: https://artifacthub.io/packages/helm/opencord/abstract-olt
+  version: 0.1.2
+- app_version: ""
+  description: A Helm chart to install Accelleran common to run Accelleran CU on CBRS
+    band
+  repository:
+    name: opencord
+    url: https://charts.opencord.org/
+  url: https://artifacthub.io/packages/helm/opencord/accelleran-cbrs-common
+  version: 0.1.2
