@@ -4,7 +4,7 @@
 ## Artifact Hub's Helm charts evaluation
 
 Source: [Artifact Hub](https://artifacthub.io/)  
-Evaluation date: 2022-12-04, 19:34:42
+Evaluation date: 2022-12-04, 21:03:52
 
 ### Pod Security Standards (PSS)
 
@@ -13,11 +13,15 @@ Evaluation date: 2022-12-04, 19:34:42
 | Category | Quantity | Percentage |
 |------|------|------|
 | Total | 9273 | 100.0% |
-| Privileged | 9273 | 100.0% |
-| Baseline | 0 | 0.0% |
-| Restricted | 0 | 0.0% |
+| Privileged | 519 | 5.6% |
+| Baseline | 3447 | 37.17% |
+| Restricted | 34 | 0.37% |
 | Error_download | 0 | 0.0% |
 | Error_template | 0 | 0.0% |
+| Empty_no_object | 3372 | 36.36% |
+| No_pod_object_but_crd | 1253 | 13.51% |
+| Version_not_evaluable | 491 | 5.29% |
+| No_pod_object | 157 | 1.69% |
 
 Legend:
  * PSS level:
@@ -37,10 +41,10 @@ Legend:
 | Score | Number of charts |
 |------|------|
 | Non-evaluable | 3356 |
-| No workload | 0 |
-| [0, -50) | 5597 |
-| [-50, -100) | 218 |
-| [-100, -150) | 67 |
+| No workload | 1426 |
+| [0, -50) | 4179 |
+| [-50, -100) | 212 |
+| [-100, -150) | 65 |
 | [-150, -200) | 16 |
 | [-200, -250) | 8 |
 | [-250, -300) | 6 |
