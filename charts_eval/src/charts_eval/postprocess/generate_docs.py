@@ -16,7 +16,7 @@ def get_chart_name(url: str):
 def generate_docs():
 
     print("# Reading charts")
-    charts_pss = load_yaml(charts_db_filename)
+    charts_db = load_yaml(charts_db_filename)
 
     # print("# Ordering charts alphabetically")
     # charts_source.sort(key=lambda x: x["repository"]["name"] + " " + get_chart_name( x["url"] ) )
@@ -45,18 +45,21 @@ def generate_docs():
 
     print("# Counting")
     date = ""
-    keys_pss = charts_pss.keys()    
-    for key in keys_pss:
-        dic_chart = charts_pss[key]
+    keys = charts_db.keys()    
+    for key in keys:
+        dic_chart = charts_db[key]
         level = "unknown"
         i += 1
         calpha[dic_chart["repository"]["name"][0]] += 1
         if "tools" not in dic_chart:
+            print( "No tools evaluation for %s" % dic_chart["repository"]["name"] )
             continue
+        
         if "pss" in dic_chart["tools"]:
+            level = dic_chart["tools"]["pss"]["level"]
             if dic_chart["tools"]["pss"]["date"] > date:
                 date = dic_chart["tools"]["pss"]["date"]
-            level = dic_chart["tools"]["pss"]["level"]
+
         if "badrobot" in dic_chart["tools"]:
             score = dic_chart["tools"]["badrobot"]["score"]
             if score == "":
@@ -127,9 +130,9 @@ def generate_docs():
     print("# Iterating all charts")
     i=0
     last_letter=""
-    keys_pss = charts_pss.keys()    
-    for key in keys_pss:
-        dic_chart = charts_pss[key]
+    keys = charts_db.keys()    
+    for key in keys:
+        dic_chart = charts_db[key]
         repo        = dic_chart["repository"]["name"]
         url         = dic_chart["repository"]["url"]
         version     = dic_chart["version"]

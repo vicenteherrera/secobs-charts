@@ -12,9 +12,9 @@ prerequisites:
 
 .PHONY: install
 install:
+	curl -fsSL https://github.com/vicenteherrera/psa-checker/main/install/install.sh | INSTALL_DIR=$$GOPATH/bin bash
 	poetry install
 	mkdir -p ./result/cache
-	mkdir -p ./result/docs
 
 # Execution --------------------------------------------------------
 
@@ -29,6 +29,10 @@ generate:
 .PHONY: evaluate
 evaluate:
 	poetry run python3 src/charts_eval/main.py evaluate
+
+.PHONY: evaluate_force
+evaluate_force:
+	poetry run python3 src/charts_eval/main.py evaluate --force
 
 .PHONY: postprocess
 postprocess:

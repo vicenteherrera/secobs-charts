@@ -15,16 +15,19 @@ def cli(args=None):
     if not args:
         args = sys.argv[1:]    
 
-    if len(args)!=1:
+    if len(args)<1:
         help()
         sys.exit(1)
 
     command = args[0]
+    param=""
+    if len(args)>1:
+        param = args[1]
 
     if (command == 'generate'):
         generate_templates()
     elif (command == 'evaluate'):
-        evaluate_tools()
+        evaluate_tools(param)
     elif (command == 'postprocess'):
         generate_docs()
     else:

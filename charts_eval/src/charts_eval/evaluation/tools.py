@@ -37,7 +37,7 @@ def _evaluate_pss(chart: Chart) -> dict:
         baseline   = os.system("cat " + template + " | " + psa_checker_path + " --level baseline   -f - >" + log_baseline + " 2>&1")
         print("  PSS evaluation: restricted")
         restricted = os.system("cat " + template + " | " + psa_checker_path + " --level restricted -f - >" + log_restricted + " 2>&1")
-        n_evaluated = utils.count_in_file("PSS level", log_restricted) - 1
+        n_evaluated     = utils.count_in_file("PSS level", log_restricted) - 1
         n_non_evaluable = utils.count_in_file("Kind not evaluable", log_restricted)
         n_wrong_version = utils.count_in_file("not evaluable for kind:", log_restricted)
         n_crd = utils.count_in_file("Non standard k8s node found", log_restricted)
@@ -114,7 +114,7 @@ def _evaluate_tool(chart: Chart, tool: str) -> dict:
 
 # --------------------------------------------------------------------
 
-def evaluate(charts_db: dict):
+def evaluate(charts_db: dict, force: bool):
     """Evaluate tools on all charts and store results on charts db"""
 
     start = datetime.now()
@@ -126,7 +126,7 @@ def evaluate(charts_db: dict):
             (i, len(charts_db), chart.repo, chart.name, chart.version))
         i+=1
         for tool in tools_list:
-            if chart.needs_evaluation(tool):
+            if force or chart.needs_evaluation(tool):
                 print("  Adding %s evaluation" % tool)
                 _evaluate_tool(chart, tool)
                 j += 1

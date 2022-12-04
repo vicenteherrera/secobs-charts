@@ -18,17 +18,20 @@ def generate_templates():
     else:
         print( "  2. charts DB not found, creating new one" )
         charts_db = {}
-
     print( "# Downloading charts and generating templates" )
     templates.generate( charts_db_source, charts_db )
+    print( "# Saving charts db" )
     utils.save_yaml( config.charts_db_filename, charts_db )
 
-def evaluate_tools():
+def evaluate_tools(param: str):
+    force=False
+    if param=="--force":
+        force=True
     print( "# Reading charts db" )
     if not os.path.exists( config.charts_db_filename ):
         print("**Error, charts db filename not found: %s" % config.charts_db_filename )
     charts_db = utils.load_yaml( config.charts_db_filename )
-
     print( "# Evaluating charts with tools" )
-    tools.evaluate( charts_db )
+    tools.evaluate( charts_db, force )
+    print( "# Saving charts db" )
     utils.save_yaml( config.charts_db_filename, charts_db )
