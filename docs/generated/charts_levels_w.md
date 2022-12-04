@@ -3,7 +3,7 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:03:52
+Evaluation date: 2022-12-04, 21:13:14
 
 [main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
@@ -100,7 +100,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [wener](https://wenerme.github.io/charts) | linkerd2-cni |  |  | 2.10.2 | stable-2.10.2 |
 | [wener](https://wenerme.github.io/charts) | logging-operator |  |  | 3.17.10 | 3.17.10 |
 | [wener](https://wenerme.github.io/charts) | loki |  |  | 3.6.0 | 2.7.0 |
-| [wener](https://wenerme.github.io/charts) | loki-distributed |  |  | 0.66.6 | 2.6.1 |
+| [wener](https://wenerme.github.io/charts) | loki-distributed |  |  | 0.66.7 | 2.6.1 |
 | [wener](https://wenerme.github.io/charts) | longhorn |  |  | 1.2.3 | v1.2.3 |
 | [wener](https://wenerme.github.io/charts) | meshery |  |  | 0.6.31 | v0.6.31 |
 | [wener](https://wenerme.github.io/charts) | metallb |  |  | 4.1.12 | 0.13.7 |
@@ -123,7 +123,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [wener](https://wenerme.github.io/charts) | prometheus-nats-exporter |  |  | 2.10.1 | 0.10.1 |
 | [wener](https://wenerme.github.io/charts) | prometheus-node-exporter |  |  | 4.8.0 | 1.5.0 |
 | [wener](https://wenerme.github.io/charts) | prometheus-postgres-exporter |  |  | 3.3.0 | 0.11.1 |
-| [wener](https://wenerme.github.io/charts) | prometheus-pushgateway |  |  | 2.0.0 | v1.5.1 |
+| [wener](https://wenerme.github.io/charts) | prometheus-pushgateway |  |  | 2.0.1 | v1.5.1 |
 | [wener](https://wenerme.github.io/charts) | prometheus-redis-exporter |  |  | 5.3.0 | v1.44.0 |
 | [wener](https://wenerme.github.io/charts) | prometheus-snmp-exporter |  |  | 1.2.1 | 0.19.0 |
 | [wener](https://wenerme.github.io/charts) | prometheus-statsd-exporter |  |  | 0.7.0 | v0.22.8 |
@@ -177,7 +177,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [wenerme](https://charts.wener.tech) | linkerd2-cni |  |  | 2.10.2 | stable-2.10.2 |
 | [wenerme](https://charts.wener.tech) | logging-operator |  |  | 3.17.10 | 3.17.10 |
 | [wenerme](https://charts.wener.tech) | loki |  |  | 3.6.0 | 2.7.0 |
-| [wenerme](https://charts.wener.tech) | loki-distributed |  |  | 0.66.6 | 2.6.1 |
+| [wenerme](https://charts.wener.tech) | loki-distributed |  |  | 0.66.7 | 2.6.1 |
 | [wenerme](https://charts.wener.tech) | longhorn |  |  | 1.2.3 | v1.2.3 |
 | [wenerme](https://charts.wener.tech) | meshery |  |  | 0.6.31 | v0.6.31 |
 | [wenerme](https://charts.wener.tech) | metallb |  |  | 4.1.12 | 0.13.7 |
@@ -200,7 +200,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [wenerme](https://charts.wener.tech) | prometheus-nats-exporter |  |  | 2.10.1 | 0.10.1 |
 | [wenerme](https://charts.wener.tech) | prometheus-node-exporter |  |  | 4.8.0 | 1.5.0 |
 | [wenerme](https://charts.wener.tech) | prometheus-postgres-exporter |  |  | 3.3.0 | 0.11.1 |
-| [wenerme](https://charts.wener.tech) | prometheus-pushgateway |  |  | 2.0.0 | v1.5.1 |
+| [wenerme](https://charts.wener.tech) | prometheus-pushgateway |  |  | 2.0.1 | v1.5.1 |
 | [wenerme](https://charts.wener.tech) | prometheus-redis-exporter |  |  | 5.3.0 | v1.44.0 |
 | [wenerme](https://charts.wener.tech) | prometheus-snmp-exporter |  |  | 1.2.1 | 0.19.0 |
 | [wenerme](https://charts.wener.tech) | prometheus-statsd-exporter |  |  | 0.7.0 | v0.22.8 |

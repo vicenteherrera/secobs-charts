@@ -3,7 +3,7 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:03:52
+Evaluation date: 2022-12-04, 21:13:14
 
 [main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
@@ -98,7 +98,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [kedacore](https://kedacore.github.io/charts) | keda |  |  | 2.8.2 | 2.8.1 |
 | [kedacore](https://kedacore.github.io/charts) | keda-add-ons-http |  |  | 0.3.0 | 0.3.0 |
 | [keel](https://charts.keel.sh) | keel |  |  | 0.9.11 | 0.16.1 |
-| [kellnr](https://bitfalter.github.io/helm/) | kellnr |  |  | 0.8.1 | 2.2.1 |
+| [kellnr](https://bitfalter.github.io/helm/) | kellnr |  |  | 0.9.0 | 2.3.0 |
 | [kelvins](https://kelvins.github.io/helm-charts/) | mlflow |  |  | 0.4.0 | 1.26.1 |
 | [keptn-ortelius-service](https://ortelius.github.io/keptn-ortelius-service) | keptn-ortelius-service |  |  | 0.0.1 | 0.0.1 |
 | [keptn](https://charts.keptn.sh) | common |  |  | 0.20.0-next.0 |  |
@@ -140,7 +140,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [kfirfer](https://kfirfer.github.io/helm/) | redis-commander |  |  | 0.1.4 | latest |
 | [kfirfer](https://kfirfer.github.io/helm/) | redis-ha |  |  | 4.12.9 | 6.0.11 |
 | [kfirfer](https://kfirfer.github.io/helm/) | skooner |  |  | 0.0.3 | 0.0.1 |
-| [kiae](https://kiaedev.github.io/helm-charts) | kiae |  |  | 0.1.4 |  |
+| [kiae](https://kiaedev.github.io/helm-charts) | kiae |  |  | 0.1.5 |  |
 | [kiali](https://kiali.org/helm-charts) | kiali-operator |  |  | 1.60.0 | v1.60.0 |
 | [kiali](https://kiali.org/helm-charts) | kiali-server |  |  | 1.60.0 | v1.60.0 |
 | [kimai2tet](https://gresci.github.io/kimai2-helmchart/) | kimai-helmchart |  |  | 0.1.0 | 1.16.0 |
@@ -171,7 +171,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [kokuwa](https://kokuwaio.github.io/helm-charts) | fluentd-elasticsearch |  |  | 13.8.0 | v4.2.3 |
 | [kokuwa](https://kokuwaio.github.io/helm-charts) | mysqldump |  |  | 6.0.0 | v3.0.16 |
 | [kokuwa](https://kokuwaio.github.io/helm-charts) | visual-regression-tracker |  |  | 1.1.0 | 4.20.5 |
-| [komodor](https://helm-charts.komodor.io) | k8s-watcher |  |  | 1.0.18 | 0.1.148 |
+| [komodor](https://helm-charts.komodor.io) | k8s-watcher |  |  | 1.0.20 | 0.1.151 |
 | [kong-mesh](https://kong.github.io/kong-mesh-charts) | kong-mesh |  |  | 2.0.0 | 2.0.0 |
 | [kong-z](https://charts.kong-z.com/) | graylog |  |  | 2.2.0 | 4.3.8 |
 | [kong](https://charts.konghq.com) | kong |  |  | 2.13.1 | 3.0 |
@@ -182,7 +182,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [krakazyabra](https://krakazyabra.github.io/microservices) | mariadb |  |  | 1.0.5 | 110.4.20 |
 | [krakazyabra](https://krakazyabra.github.io/microservices) | nginx |  |  | 1.0.0 | 1.19.0 |
 | [krakazyabra](https://krakazyabra.github.io/microservices) | postgres |  |  | 0.1.0 | 13.3 |
-| [kraken-ci](https://kraken.ci/helm-repo/charts) | kraken-ci |  |  | 0.1087.0 | 0.1087 |
+| [kraken-ci](https://kraken.ci/helm-repo/charts) | kraken-ci |  |  | 0.1091.0 | 0.1091 |
 | [kraken](https://clustellar.github.io/kraken) | kraken |  |  | 0.2.0 |  |
 | [kremers](https://kremers.github.io) | postgresql-ha |  |  | 7.5.1 | 11.12.0 |
 | [kremers](https://kremers.github.io) | vmware-exporter |  |  | 2.3.0 | v0.18.4 |

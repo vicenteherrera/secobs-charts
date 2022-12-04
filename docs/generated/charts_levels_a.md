@@ -3,7 +3,7 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:03:52
+Evaluation date: 2022-12-04, 21:13:14
 
 [main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
@@ -89,8 +89,8 @@ Evaluation date: 2022-12-04, 21:03:52
 | [ajgon](https://charts.rzegocki.pl/) | lldap |  |  | 0.5.1 | latest-alpine |
 | [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-api-gateway |  |  | 1.17.8 | 3.19.0 |
 | [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-csi-provider |  |  | 1.0.2 | 1.0.0 |
-| [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-secrets-injection |  |  | 1.2.24 | 0.20.20 |
-| [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-sra |  |  | 0.13.9 | v0.14.2_0.11.49 |
+| [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-secrets-injection |  |  | 1.2.25 | 0.20.21 |
+| [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-sra |  |  | 0.13.11 | v0.14.2_0.11.51 |
 | [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-ssh-proxy |  |  | 1.2.35 | 0.11.42 |
 | [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-zero-trust-bastion |  |  | 1.4.4 | v0.13.5 |
 | [akeyless-services-helm](https://akeylesslabs.github.io/helm-charts) | akeyless-zero-trust-web-access |  |  | 1.4.7 | 0.13.5 |
