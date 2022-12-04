@@ -3,7 +3,7 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:03:52
+Evaluation date: 2022-12-04, 21:13:14
 
 [main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
@@ -195,7 +195,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [devopstales](https://devopstales.github.io/helm-charts) | kuberos |  |  | 0.2.2 | 2018-07-03 |
 | [devopstales](https://devopstales.github.io/helm-charts) | kyverno |  |  | 2.5.1 | v1.7.1 |
 | [devopstales](https://devopstales.github.io/helm-charts) | permission-manager |  |  | 1.8.0 | 1.7.1-rc1 |
-| [devopstales](https://devopstales.github.io/helm-charts) | pushprox |  |  | 0.1.4 | 0.1.0 |
+| [devopstales](https://devopstales.github.io/helm-charts) | pushprox |  |  | 0.1.6 | 0.1.0 |
 | [devopstales](https://devopstales.github.io/helm-charts) | trivy-operator |  |  | 2.5.0 | 0.23.0 |
 | [devopsweekly](https://zufardhiyaulhaq.com/devopsweekly/charts/releases/) | devopsweekly |  |  | 2.0.0 | 2.0.0 |
 | [devplayer0](https://devplayer0.github.io/charts/) | dnsmasq |  |  | 0.1.5 | 0.1.1 |

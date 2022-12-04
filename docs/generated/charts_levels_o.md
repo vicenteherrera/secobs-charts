@@ -3,7 +3,7 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:03:52
+Evaluation date: 2022-12-04, 21:13:14
 
 [main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
@@ -22,7 +22,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [obeone](https://charts.obeone.cloud) | petio |  |  | 1.0.2 | new-ui |
 | [obeone](https://charts.obeone.cloud) | winbox |  |  | 1.1.1 | 3.37 |
 | [observabilitysec](https://jdvalencia422.github.io/helm-charts/charts/) | observabilitysec |  |  | 0.0.1 | 1.0.0 |
-| [observertc](https://observertc.github.io/helm/) | webrtc-observer |  |  | 3.1.5 | 1.0.0-hamok |
+| [observertc](https://observertc.github.io/helm/) | webrtc-observer |  |  | 3.1.6 | 1.0.0 |
 | [oci-karpenter](oci://public.ecr.aws/karpenter/karpenter) | karpenter |  |  | 0.19.3 | 0.19.3 |
 | [ocp4-etcd-snapshot](https://staranto.github.io/ocp4-etcd-snapshot/helm) | etcd-snapshot |  |  | 1.0.2 | 1.0.2 |
 | [octopus](https://git.openi.org.cn/OpenI/octopus-charts/raw/branch/master) | octopus |  |  | 4.2.5 | v4.2.5 |
@@ -70,7 +70,7 @@ Evaluation date: 2022-12-04, 21:03:52
 | [onechart](https://chart.onechart.dev) | namespaces |  |  | 0.3.0 |  |
 | [onechart](https://chart.onechart.dev) | onechart |  |  | 0.41.0 |  |
 | [oneconvergence](https://oneconvergence.github.io/dkube-helm) | dkube-deployer |  |  | 1.0.8 |  |
-| [onedev](https://dl.cloudsmith.io/public/onedev/onedev/helm/charts/) | onedev |  |  | 7.8.5 | 7.8.5 |
+| [onedev](https://dl.cloudsmith.io/public/onedev/onedev/helm/charts/) | onedev |  |  | 7.8.6 | 7.8.6 |
 | [onepassword-connect](https://1password.github.io/connect-helm-charts) | connect |  |  | 1.9.0 | 1.5.7 |
 | [onesaitplatformhelmchart](https://helm.onesaitplatform.com/) | onesaitplatform-ce-base-chart |  |  | 1.0.0-ce | 1.0.0-ce |
 | [onlinejudge](https://thetkpark.github.io/onlinejudge-helm-chart) | onlinejudge |  |  | 0.1.0 | 20210326-c7b2b |
