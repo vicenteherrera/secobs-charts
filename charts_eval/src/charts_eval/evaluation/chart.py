@@ -58,16 +58,22 @@ class Chart:
             return True
         return False
 
-    def needs_evaluation(self, tool: str) -> bool:
-        if tool not in self.tools:
-            print("  Chart key not found in tools evaluation")
-            return True
-        if not "cache" in self.status or \
-            self.status["cache"] != "generated":
-            print("  Chart templated not generated, status=%s" % self.status["cache"])
+    def is_generated(self) -> bool:
+        if not "cache" in self.status:
             return False
+        if self.status["cache"] != "generated":
+            return False
+        return True
+
+    def needs_evaluation(self, tool: str) -> bool:
+        if not self.is_generated():
+            print("  Chart not generated")
+            return False
+        if tool not in self.tools:
+            print("  Chart doesn't have tool evaluation")
+            return True
         if 'template_filename' not in self.status:
-            print("  **Error, template filename not in chart status")
+            print("  **Error, template filename not in chart status %s" % self.status)
             exit(1)
         if tool not in self.tools:
             print("  Tool not evaluated before")

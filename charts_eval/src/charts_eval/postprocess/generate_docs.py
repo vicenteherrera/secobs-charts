@@ -22,7 +22,8 @@ def generate_docs():
     # charts_source.sort(key=lambda x: x["repository"]["name"] + " " + get_chart_name( x["url"] ) )
 
     print("# Iterating charts")
-    now = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
+
+    # Init PSS counts
     count = {
         "total":0,
         "privileged":0,
@@ -31,11 +32,11 @@ def generate_docs():
         "error_download":0,
         "error_template":0,
     }
-    i=0
     calpha = {}
     for l in ascii_lowercase:
         calpha[l]=0
 
+    # Initi Badrobot bucket calc
     brbuckets = {}
     br_min_buckets = -700
     br_size_buckets = -50
@@ -43,55 +44,73 @@ def generate_docs():
     for i in range(0, br_min_buckets, br_size_buckets):
         brbuckets[str(i)] = 0
 
-    print("# Counting")
-    date = ""
-    keys = charts_db.keys()    
+    i=0
+    max_date = ""
+    keys = charts_db.keys()
+
+    print("# Calculate PSS statistics")
+
     for key in keys:
         dic_chart = charts_db[key]
         level = "unknown"
         i += 1
         calpha[dic_chart["repository"]["name"][0]] += 1
+
+        if "status" in dic_chart and "cache" in dic_chart["status"]:
+            # default status includes error downloading chart or generating the template
+            level = dic_chart["status"]["cache"]
+        else:
+            print("Chart status not found for %s" % dic_chart["repository"]["name"] )
+
         if "tools" not in dic_chart:
             print( "No tools evaluation for %s" % dic_chart["repository"]["name"] )
-            continue
-        
+        elif level[0:5]!="error":
+            if "pss" in dic_chart["tools"]:
+                pss_level = dic_chart["tools"]["pss"]["level"]
+                if pss_level != "": level = pss_level
+                if dic_chart["tools"]["pss"]["date"] > max_date:
+                    max_date = dic_chart["tools"]["pss"]["date"]
+
+        count["total"] +=1
+        if level not in count: count[level] = 1
+        else: count[level] += 1
+
+    print("# Calculate Badrobot statistics")
+
+    for key in keys:
+        dic_chart = charts_db[key]
+        level = "unknown"
+        i += 1
+
         if "status" in dic_chart and "cache" in dic_chart["status"]:
             # default status includes error downloading chart or generating the template
             level = dic_chart["status"]["cache"]
 
-        if "pss" in dic_chart["tools"]:
-            level = dic_chart["tools"]["pss"]["level"]
-            if dic_chart["tools"]["pss"]["date"] > date:
-                date = dic_chart["tools"]["pss"]["date"]
-
-        if "badrobot" in dic_chart["tools"]:
-            score = dic_chart["tools"]["badrobot"]["score"]
-            if score == "":
-                br_non_evaluable += 1
-            elif level in ["empty_no_object", "no_pod_object_but_crd", "no_pod_object"]:
-                # TODO: decouple from PSS evaluation
-                br_no_workload += 1
-            else:
-                score = int(score)
-                if score < brmin: brmin = int(score)
-                for i in range(0, br_min_buckets + br_size_buckets, br_size_buckets):
-                    if i >= score and score > ( i + br_size_buckets ):
-                        brbuckets[str(i)] += 1
-                        break
-
-        count["total"] +=1
-        if level not in count:
-            count[level] = 1
+        if "tools" not in dic_chart:
+            print( "No tools evaluation for %s" % dic_chart["repository"]["name"] )
         else:
-            count[level] += 1
-        # print( "# ["+ str(i) + "/" + str(len(charts_pss))+ "] " + dic_chart["repository"]["name"] + level)
+            if "badrobot" in dic_chart["tools"]:
+                score = dic_chart["tools"]["badrobot"]["score"]
+                if score == "":
+                    br_non_evaluable += 1
+                elif level in ["empty_no_object", "no_pod_object_but_crd", "no_pod_object"]:
+                    # TODO: decouple from PSS evaluation
+                    br_no_workload += 1
+                else:
+                    score = int(score)
+                    if score < brmin: brmin = int(score)
+                    for i in range(0, br_min_buckets + br_size_buckets, br_size_buckets):
+                        if i >= score and score > ( i + br_size_buckets ):
+                            brbuckets[str(i)] += 1
+                            break
+
 
     header = "[Go to root documentation](https://vicenteherrera.com/secobs-charts)  \n"
     header += "[Go to index of charts evaluation](https://vicenteherrera.com/secobs-charts/docs/generated/charts_levels)\n\n"
     header += "## Artifact Hub's Helm charts evaluation\n\n"
-    date = "Evaluation date: " + date + "\n"
+    max_date = "Evaluation date: " + max_date + "\n"
     list_md = open(doc_filename_prefix+".md", "w")
-    list_md.write(header + "Source: [Artifact Hub](https://artifacthub.io/)  \n" + date + "\n### Pod Security Standards (PSS)\n\n")
+    list_md.write(header + "Source: [Artifact Hub](https://artifacthub.io/)  \n" + max_date + "\n### Pod Security Standards (PSS)\n\n")
     list_md.write("[Pod Security Standards (PSS)](https://kubernetes.io/docs/concepts/security/pod-security-standards/) define three levels of security (restricted, baseline and privileged) that can be enforced for pods in a namespace. Evaluation done with [psa-checker](https://vicenteherrera.com/psa-checker/) command line tool, that checks into Kubernetes objects that can create pods.\n\n")
     list_md.write("| Category | Quantity | Percentage |\n|------|------|------|\n")
     for key in count.keys():
@@ -120,7 +139,6 @@ def generate_docs():
     keys = brbuckets.keys()
     for key in keys:
         list_md.write("| [" + str(key) + ", " + str(int(key) + br_size_buckets) + ") | " + str(brbuckets[key]) + " |\n")
-
 
     list_md.write("\n### Charts list\n\n")
 
@@ -151,7 +169,7 @@ def generate_docs():
             # print("# Writing header: "+letter)
             list_md.close()
             list_md = open(doc_filename_prefix+"_"+letter+".md", "w")
-            list_md.write(header + date + "\n" + index)
+            list_md.write(header + max_date + "\n" + index)
             list_md.write("\n\n| repo | chart | PSS level | BadRobot score | chart version | app version |\n")
             list_md.write("|------|------|------|------|------|------|\n")
 
@@ -161,9 +179,7 @@ def generate_docs():
             level = dic_chart["tools"]["pss"]["level"]
             if "badrobot" in dic_chart:
                 brscore = dic_chart["tools"]["badrobot"]["score"]
-        # print( "# ["+ str(i) + "/" + str(len(keys_pss))+ "] " + repo + " " + chart + " " + level)
         list_md.write("| [" + repo + "](" + url + ") | " + chart + " | " + level  + " | " + brscore  + " | " + version + " | " + app_version  + " |\n")
-        # sys.exit()
 
 
     list_md.close()

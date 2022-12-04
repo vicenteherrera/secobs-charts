@@ -30,7 +30,7 @@ def _evaluate_pss(chart: Chart) -> dict:
     n_crd=0
     
     if not os.path.exists(template):
-        print("Error, no template generated")
+        print("**Error, no template generated at %s" % template)
         sys.exit(1)
     else: 
         print("  PSS evaluation: baseline")
@@ -126,7 +126,9 @@ def evaluate(charts_db: dict, force: bool):
             (i, len(charts_db), chart.repo, chart.name, chart.version))
         i+=1
         for tool in tools_list:
-            if force or chart.needs_evaluation(tool):
+            if not chart.is_generated():
+                chart.tools[tool]={}
+            elif force or chart.needs_evaluation(tool):
                 print("  Adding %s evaluation" % tool)
                 _evaluate_tool(chart, tool)
                 j += 1

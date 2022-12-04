@@ -25,8 +25,7 @@ def generate_templates():
 
 def evaluate_tools(param: str):
     force=False
-    if param=="--force":
-        force=True
+    if param=="--force": force=True
     print( "# Reading charts db" )
     if not os.path.exists( config.charts_db_filename ):
         print("**Error, charts db filename not found: %s" % config.charts_db_filename )

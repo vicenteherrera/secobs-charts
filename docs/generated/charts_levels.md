@@ -16,9 +16,9 @@ Evaluation date: 2022-12-04, 21:13:14
 | Privileged | 518 | 5.59% |
 | Baseline | 3449 | 37.19% |
 | Restricted | 34 | 0.37% |
-| Error_download | 0 | 0.0% |
+| Error_download | 8 | 0.09% |
 | Error_template | 0 | 0.0% |
-| Empty_no_object | 3371 | 36.35% |
+| Empty_no_object | 3363 | 36.27% |
 | No_pod_object_but_crd | 1253 | 13.51% |
 | Version_not_evaluable | 491 | 5.29% |
 | No_pod_object | 157 | 1.69% |
@@ -41,10 +41,10 @@ Legend:
 | Score | Number of charts |
 |------|------|
 | Non-evaluable | 3355 |
-| No workload | 1426 |
-| [0, -50) | 4180 |
-| [-50, -100) | 212 |
-| [-100, -150) | 65 |
+| No workload | 0 |
+| [0, -50) | 5598 |
+| [-50, -100) | 218 |
+| [-100, -150) | 67 |
 | [-150, -200) | 16 |
 | [-200, -250) | 8 |
 | [-250, -300) | 6 |
