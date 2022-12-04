@@ -7,22 +7,22 @@ import urllib
 import charts_eval.config as config
 import charts_eval.evaluation.utils as utils
 from charts_eval.evaluation.chart import Chart
+from charts_eval.evaluation.templates import get_logs_prefix
 
 tools_list = ["pss", "badrobot"]
 
-def _evaluate_pss(repo, chart, version):
+def _evaluate_pss(chart: Chart) -> dict:
+    psa_checker_path = "psa-checker"
     psa_version = "0.0.1"
     # psa_version = subprocess.getoutput(psa_checker_path + ' --version')
     # psa_version = psa_version[len("psa-checker version "):]
 
     start = datetime.now()
     now = start.strftime("%Y-%m-%d, %H:%M:%S")
-    logs_prefix    = config.logs_dir + "/" + urllib.parse.quote(repo + "_" + chart + "_" + version)
+    template       = chart.status["template_filename"]
+    logs_prefix    = get_logs_prefix(chart)
     log_baseline   = logs_prefix + "_baseline.log"
     log_restricted = logs_prefix + "_restricted.log"
-    template       = logs_prefix + "_template.yaml"
-
-    psa_checker_path = "psa-checker"
 
     n_evaluated=0
     n_non_evaluable=0
@@ -66,7 +66,7 @@ def _evaluate_pss(repo, chart, version):
 
     psa_dict = {
         "level" : level,
-        "chart_version" : version,
+        "chart_version" : chart.version,
         "log_restricted": log_restricted,
         "log_baseline": log_baseline,
         "date": now,
@@ -81,18 +81,19 @@ def _evaluate_pss(repo, chart, version):
 
 # --------------------------------------------------------------------
 
-def _evaluate_badrobot(repo, chart, version):
-    logs_prefix    = config.logs_dir + "/" + urllib.parse.quote(repo + "_" + chart + "_" + version)
+def _evaluate_badrobot(chart: Chart) -> dict:
+    template       = chart.status["template_filename"]
+    logs_prefix    = get_logs_prefix(chart)
     log_badrobot   = logs_prefix + "_badrobot.log"
-    template       = logs_prefix + "_template.yaml"
     now = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
 
     os.system("badrobot scan " + template + " > " + log_badrobot )
     os.system("cat " + log_badrobot + " | jq '[.[].score] | add' > " + log_badrobot + "_sum")
     with open(log_badrobot+"_sum") as f:
         score_badrobot = f.readline().strip('\n')
+    print("    Score: %s" % score_badrobot)
     result = {
-        "chart_version" : version,
+        "chart_version" : chart.version,
         "score": score_badrobot,
         "date": now
     }
@@ -103,9 +104,9 @@ def _evaluate_badrobot(repo, chart, version):
 def _evaluate_tool(chart: Chart, tool: str) -> dict:
     """Returns dictionary with evaluation result from tool"""
     if tool=="pss":
-        result = _evaluate_pss(chart.repo, chart.name, chart.version)
+        result = _evaluate_pss(chart)
     elif tool=="badrobot":
-        result = _evaluate_badrobot(chart.repo, chart.name, chart.version)
+        result = _evaluate_badrobot(chart)
     else:
         print("**Error, tool not found %s" % tool)
     

@@ -3,6 +3,12 @@
 .PHONY: all
 all: install download_charts_info evaluate postprocess
 
+.PHONY: prerequisites
+prerequisites:
+	jq --version
+	yq version
+	helm version
+
 .PHONY: install
 install:
 	poetry install
@@ -23,19 +29,22 @@ postprocess:
 
 # Reset --------------------------------------------------------
 
+.PHONY: reset-cache
 reset-cache:
 	rm result/cache/* ||:
 
+.PHONY: reset-db
 reset-db:
 	rm result/charts_db.yaml ||:
 
+.PHONY: full-reset
 full-reset: reset-db reset-cache
 
 # Commit docs ---------------------------------------------------
 
+.PHONY: push-gen-docs
 push-gen-docs:
 	git pull
 	git add ../docs/generated/*
-	git commit -m "Updated generated docs chart evaluation $(shell date +'%Y-%m-%d %H:%M:%S'
-)"
+	git commit -m "Updated generated docs chart evaluation $(shell date +'%Y-%m-%d %H:%M:%S')"
 	git push

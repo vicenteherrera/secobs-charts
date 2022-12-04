@@ -1,5 +1,5 @@
 
-from copy import copy
+from copy import deepcopy
 
 class Chart:
     repo = ""
@@ -11,7 +11,7 @@ class Chart:
     _dict={}
 
     def __init__(self, chart_dic: dict):
-        self._dict   = copy(chart_dic)
+        self._dict   = deepcopy(chart_dic)
         self.repo    = chart_dic["repository"]["name"]
         self.url     = chart_dic["repository"]["url"]
         self.version = chart_dic["version"]
@@ -21,6 +21,8 @@ class Chart:
 
         if "status" in chart_dic:
             self.status=chart_dic["status"]
+        if "tools" in chart_dic:
+            self.tools = chart_dic["tools"]
 
     def _get_chart_name(self, url: str) -> str:
         parts = url.split("/")
@@ -33,9 +35,9 @@ class Chart:
         return []
 
     def get_dict(self):
-        dict = copy(self._dict)
-        dict["status"] = copy(self.status)
-        dict["tools"] = copy(self.tools)
+        dict = deepcopy(self._dict)
+        dict["status"] = deepcopy(self.status)
+        dict["tools"] = deepcopy(self.tools)
         return dict
 
     def is_chart_error(self) -> bool:
@@ -57,17 +59,25 @@ class Chart:
         return False
 
     def needs_evaluation(self, tool: str) -> bool:
-        if self.key not in self.tools:
+        if tool not in self.tools:
+            print("  Chart key not found in tools evaluation")
             return True
         if not "cache" in self.status or \
-            self.status["status"]["cache"] != "generated":
+            self.status["cache"] != "generated":
             print("  Chart templated not generated, status=%s" % self.status["cache"])
             return False
-        if "chart_version" not in self.tool:
-            print("  **Error, tool evaluation %s doesn't have chart version" % tool)
+        if 'template_filename' not in self.status:
+            print("  **Error, template filename not in chart status")
+            exit(1)
+        if tool not in self.tools:
+            print("  Tool not evaluated before")
             return True
-        if self.tool["chart_version"] != self.version:
-            print("  Chart version for tool evaluation surpassed")
+        if "chart_version" not in self.tools[tool]:
+            print("  **Error, tool evaluation doesn't have chart version: %s" % self.tools)
+            exit(1)
+        if self.tools[tool]["chart_version"] != self.version:
+            print("  Chart version %s for tool evaluation %s surpassed" % \
+                (self.version, self.tools[tool]["chart_version"]))
             return True
         print("  Tool %s up to date" % tool)
         return False
