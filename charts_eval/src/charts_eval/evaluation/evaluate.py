@@ -13,10 +13,10 @@ def generate_templates():
     print( "  1. reading AH source file " )
     charts_db_source = utils.load_yaml( config.charts_source_filename )
     if os.path.exists( config.charts_db_filename ):
-        print( "  2. reading existing charts PSS" )
+        print( "  2. reading charts db" )
         charts_db = utils.load_yaml( config.charts_db_filename )
     else:
-        print( "  2. charts DB not found, creating new one" )
+        print( "  2. charts db not found, creating new one" )
         charts_db = {}
     print( "# Downloading charts and generating templates" )
     templates.generate( charts_db_source, charts_db )

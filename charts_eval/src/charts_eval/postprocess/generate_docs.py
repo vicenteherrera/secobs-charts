@@ -15,7 +15,7 @@ def get_chart_name(url: str):
 
 def generate_docs():
 
-    print("# Reading charts")
+    print("# Reading charts db")
     charts_db = load_yaml(charts_db_filename)
 
     # print("# Ordering charts alphabetically")
@@ -55,6 +55,10 @@ def generate_docs():
             print( "No tools evaluation for %s" % dic_chart["repository"]["name"] )
             continue
         
+        if "status" in dic_chart and "cache" in dic_chart["status"]:
+            # default status includes error downloading chart or generating the template
+            level = dic_chart["status"]["cache"]
+
         if "pss" in dic_chart["tools"]:
             level = dic_chart["tools"]["pss"]["level"]
             if dic_chart["tools"]["pss"]["date"] > date:
@@ -64,7 +68,7 @@ def generate_docs():
             score = dic_chart["tools"]["badrobot"]["score"]
             if score == "":
                 br_non_evaluable += 1
-            elif dic_chart["tools"]["pss"]["level"] in ["empty_no_object", "no_pod_object_but_crd", "no_pod_object"]:
+            elif level in ["empty_no_object", "no_pod_object_but_crd", "no_pod_object"]:
                 # TODO: decouple from PSS evaluation
                 br_no_workload += 1
             else:
