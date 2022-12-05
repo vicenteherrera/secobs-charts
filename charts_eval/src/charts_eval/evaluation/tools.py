@@ -9,7 +9,7 @@ import charts_eval.evaluation.utils as utils
 from charts_eval.evaluation.chart import Chart
 from charts_eval.evaluation.templates import get_logs_prefix
 
-tools_list = ["pss", "badrobot"]
+tools_list = ["pss", "badrobot", "images"]
 
 def _evaluate_pss(chart: Chart) -> dict:
     psa_checker_path = "psa-checker"
@@ -111,16 +111,19 @@ def _evaluate_badrobot(chart: Chart) -> dict:
 
 def _evaluate_images(chart: Chart) -> dict:
     template       = chart.status["template_filename"]
-    log_badrobot   = get_logs_prefix(chart) + "_badrobot.log"
+    log_images   = get_logs_prefix(chart) + "_images.log"
     now = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
     tool_version = "0.0.1"
+    images_data=[]
 
-    # os.system("badrobot scan " + template + " > " + log_badrobot )
-    # os.system("cat " + log_badrobot + " | jq '[.[].score] | add' > " + log_badrobot + "_sum")
-    # with open(log_badrobot+"_sum") as f:
-    #     score_badrobot = f.readline().strip('\n')
-    # print("    Score: %s" % score_badrobot)
-    images_data = {}
+    error = os.system("cat " + template + " | yq '..|.image? | select(.)' | sort -u > " + log_images )
+    if error == 0:
+        with open(log_images) as f: images = f.readline()
+        for img in images.split("\n"):
+            if img != '' and img != '---':
+                images_data.append(img)
+
+    print("    Images: %s" % images_data)
 
     result = {
         "chart_version" : chart.version,
@@ -167,5 +170,7 @@ def evaluate(charts_db: dict, force: bool):
                 j += 1
         charts_db[key] = chart.get_dict()
 
-    print( "%s charts new evaluations done in %s" % \
-        ( j - 1 , str( datetime.now() - start ) ))
+    print( "# Result of evaluation for all charts with tools")
+    print( "%s tools: %s" % (len(tools_list), tools_list))
+    print( "%s new chart tool evaluations" % ( j - 1 ) )
+    print( "%s total charts processed in %s" % (len(keys), ( datetime.now() - start ) ))

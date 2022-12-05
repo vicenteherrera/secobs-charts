@@ -31,7 +31,7 @@ evaluate:
 	poetry run python3 src/charts_eval/main.py evaluate
 
 .PHONY: evaluate-force
-evaluate_force:
+evaluate-force:
 	poetry run python3 src/charts_eval/main.py evaluate --force
 
 .PHONY: postprocess
