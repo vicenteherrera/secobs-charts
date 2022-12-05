@@ -30,7 +30,7 @@ generate:
 evaluate:
 	poetry run python3 src/charts_eval/main.py evaluate
 
-.PHONY: evaluate_force
+.PHONY: evaluate-force
 evaluate_force:
 	poetry run python3 src/charts_eval/main.py evaluate --force
 
@@ -42,14 +42,32 @@ postprocess:
 
 .PHONY: reset-cache
 reset-cache:
-	rm result/cache/* ||:
+	@rm -r ./result/cache/ 2>/dev/null ||:
+	@mkdir -p ./result/cache/
 
 .PHONY: reset-db
 reset-db:
-	rm result/charts_db.yaml ||:
+	@rm ./result/charts_db.yaml 2>/dev/null ||:
 
-.PHONY: full-reset
-full-reset: reset-db reset-cache
+.PHONY: reset-full
+reset-full: reset-db reset-cache
+
+# Test --------------------------------------------------------
+
+.PHONY: test-e2e
+test-e2e: reset-full
+	cp ./tests/charts_ah_source.yaml ./result
+
+
+# Download from live server -------------------------------------
+
+.PHONY: download-result
+download-result:
+	ssh $$ONLINEHOST cd $$ONLINEPATH ; rm result.tgz ||: ; tar -czvf result.tgz ./result
+	scp $$ONLINEHOST:$$ONLINEPATH/result.tgz .
+	tar -xzvf result.tgz
+	rm result.tgz
+
 
 # Commit docs ---------------------------------------------------
 

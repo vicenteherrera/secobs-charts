@@ -6,7 +6,7 @@ class Chart:
     name = ""
     version = ""
     key=""
-    status=[]
+    status={}
     tools={}
     _dict={}
 
@@ -40,9 +40,10 @@ class Chart:
         dict["tools"] = deepcopy(self.tools)
         return dict
 
-    def is_chart_error(self) -> bool:
-        if "generated" in self.status and self.status.generated[0:5]=='error':
-            return True
+    def is_error(self) -> bool:
+        if "cache" in self.status:
+            if self.status["cache"][0:5]=='error':
+                return True
         return False
 
     def needs_update(self, charts_db: dict) -> bool:
@@ -72,7 +73,7 @@ class Chart:
         if tool not in self.tools:
             print("  Chart doesn't have tool evaluation")
             return True
-        if 'template_filename' not in self.status:
+        if "template_filename" not in self.status:
             print("  **Error, template filename not in chart status %s" % self.status)
             exit(1)
         if tool not in self.tools:

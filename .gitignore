@@ -2,3 +2,4 @@
 __pycache__
 charts_eval/result/
 jupyter/data/*
+.envrc

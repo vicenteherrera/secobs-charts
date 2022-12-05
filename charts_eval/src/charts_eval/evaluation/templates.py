@@ -7,7 +7,6 @@ import charts_eval.config as config
 import charts_eval.evaluation.utils as utils
 
 def get_logs_prefix( chart: Chart ) -> str:
-    # TODO: Make sure there is no collision with slugify names
     return config.logs_dir + "/" + \
         parse.quote(chart.repo + "_" + chart.name + "_" + chart.version)
 
@@ -56,8 +55,7 @@ def generate( charts_db_source: dict, charts_db: dict ):
     start = datetime.now()
     now = start.strftime("%Y-%m-%d, %H:%M:%S")
     # TODO: delete old log and templates to save disk space
-    # TODO: Remove evaluated charts that no longer appear in Artifact Hub
-    i = new = nerror = 0
+    i = new = nerror = nexist = 0
     found=[]
     duplicated=[]
     for dic_chart in charts_db_source:
@@ -69,35 +67,45 @@ def generate( charts_db_source: dict, charts_db: dict ):
             (i, len(charts_db_source), chart.repo, chart.name, chart.version))
         
         # Store source chart keys to check duplicates
-        # and if we have extra keys later
+        # and if we have extra removed keys
         if chart.key in found:
             duplicated.append(chart.key)
         found.append(chart.key)
 
-        # If chart data exists we copy previous tools evaluation
+        # If chart data exists we copy previous status and tools evaluation
         if chart.key in charts_db:
             chart_prev = Chart( charts_db[chart.key] )
             chart.tools = chart_prev.tools
+            chart.status = chart_prev.status
 
         # Generate template
         template = _template_filename(chart)
         error = False
+        if chart.is_error():
+            print("  **Error on previous chart evaluation")
+            nerror +=1
+            continue
+        
         if not os.path.exists( _log_helm(chart) ):
             error = _download_template(chart)
+
         if error:
-            print("  **Error downloading chart")
+            print("**Error downloading chart")
             status = "error_download"
             template = ""   
             nerror += 1  
         else:
-            error = _generate_template(chart)
-            if ( error ):
-                print("  **Error generating template")
-                status = "error_template"
-                template = ""
-                nerror += 1
+            if os.path.exists( template ):
+                nexist += 1
             else:
-                new += 1
+                error = _generate_template(chart)
+                if ( error ):
+                    print("**Error generating template")
+                    status = "error_template"
+                    template = ""
+                    nerror += 1
+                else:
+                    new += 1
 
         # Store chart data
         chart.status = {
@@ -115,8 +123,11 @@ def generate( charts_db_source: dict, charts_db: dict ):
         if key not in found:
             charts_db[key]["status"]["cache"]="removed"
             j += 1
+    print("# New charts and template generation results")
     print("%s charts removed from db" % j)
+    # TODO: store duplicated charts with different keys
     print("%s duplicated charts: %s" % (len(duplicated),duplicated))
     print("%s charts error downloading or generating" % nerror)
-    print("Generated %s of %s total charts templates in %s" % \
-        ( new , i, str( datetime.now() - start ) ))
+    print("%s charts templates generated" % new )
+    print("%s charts previously generated" % nexist )
+    print("%s total charts processed in %s" % (i, ( datetime.now() - start ) ))

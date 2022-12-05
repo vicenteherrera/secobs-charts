@@ -65,16 +65,19 @@ def _evaluate_pss(chart: Chart) -> dict:
     print("  Level: " + level)
 
     psa_dict = {
-        "level" : level,
         "chart_version" : chart.version,
-        "log_restricted": log_restricted,
-        "log_baseline": log_baseline,
+        "tool_version": psa_version,
         "date": now,
-        "psa-checker_version" : psa_version,
-        "n_evaluated": n_evaluated, 
-        "n_non_evaluable":n_non_evaluable,
-        "n_crd": n_crd,
-        "n_wrong_version":n_wrong_version,
+        "status": "evaluated",
+        "data": {
+            "level" : level,
+            "log_restricted": log_restricted,
+            "log_baseline": log_baseline,
+            "n_evaluated": n_evaluated, 
+            "n_non_evaluable":n_non_evaluable,
+            "n_crd": n_crd,
+            "n_wrong_version":n_wrong_version,
+        }
     }
 
     return psa_dict
@@ -86,6 +89,7 @@ def _evaluate_badrobot(chart: Chart) -> dict:
     logs_prefix    = get_logs_prefix(chart)
     log_badrobot   = logs_prefix + "_badrobot.log"
     now = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
+    br_version = '0.0.1'
 
     os.system("badrobot scan " + template + " > " + log_badrobot )
     os.system("cat " + log_badrobot + " | jq '[.[].score] | add' > " + log_badrobot + "_sum")
@@ -94,7 +98,34 @@ def _evaluate_badrobot(chart: Chart) -> dict:
     print("    Score: %s" % score_badrobot)
     result = {
         "chart_version" : chart.version,
-        "score": score_badrobot,
+        "tool_version": br_version,
+        "date": now,
+        "status": "evaluated",
+        "data": {
+            "score": score_badrobot,
+        }
+    }
+    return result
+
+# --------------------------------------------------------------------
+
+def _evaluate_images(chart: Chart) -> dict:
+    template       = chart.status["template_filename"]
+    log_badrobot   = get_logs_prefix(chart) + "_badrobot.log"
+    now = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
+    tool_version = "0.0.1"
+
+    # os.system("badrobot scan " + template + " > " + log_badrobot )
+    # os.system("cat " + log_badrobot + " | jq '[.[].score] | add' > " + log_badrobot + "_sum")
+    # with open(log_badrobot+"_sum") as f:
+    #     score_badrobot = f.readline().strip('\n')
+    # print("    Score: %s" % score_badrobot)
+    images_data = {}
+
+    result = {
+        "chart_version" : chart.version,
+        "tool_version" : tool_version,
+        "data": images_data,
         "date": now
     }
     return result
@@ -107,6 +138,8 @@ def _evaluate_tool(chart: Chart, tool: str) -> dict:
         result = _evaluate_pss(chart)
     elif tool=="badrobot":
         result = _evaluate_badrobot(chart)
+    elif tool=="images":
+        result = _evaluate_images(chart)
     else:
         print("**Error, tool not found %s" % tool)
     

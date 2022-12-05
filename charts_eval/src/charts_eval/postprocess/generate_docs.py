@@ -22,8 +22,14 @@ def generate_docs():
     # charts_source.sort(key=lambda x: x["repository"]["name"] + " " + get_chart_name( x["url"] ) )
 
     print("# Iterating charts")
+    keys = charts_db.keys()
 
-    # Init PSS counts
+    # It's more optimal to loop all charts once and process each tool,
+    # but it's more complex to understand, and anyway this is very fast
+
+    # PSS -----------------------------------------------------------
+    print("# Calculate PSS statistics")
+
     count = {
         "total":0,
         "privileged":0,
@@ -35,19 +41,8 @@ def generate_docs():
     for l in ascii_lowercase:
         calpha[l]=0
 
-    # Initi Badrobot bucket calc
-    brbuckets = {}
-    br_min_buckets = -700
-    br_size_buckets = -50
-    brmin = br_non_evaluable = br_no_workload = 0
-    for i in range(0, br_min_buckets, br_size_buckets):
-        brbuckets[str(i)] = 0
-
     i=0
     max_date = ""
-    keys = charts_db.keys()
-
-    print("# Calculate PSS statistics")
 
     for key in keys:
         dic_chart = charts_db[key]
@@ -65,7 +60,7 @@ def generate_docs():
             print( "No tools evaluation for %s" % dic_chart["repository"]["name"] )
         elif level[0:5]!="error":
             if "pss" in dic_chart["tools"]:
-                pss_level = dic_chart["tools"]["pss"]["level"]
+                pss_level = dic_chart["tools"]["pss"]["data"]["level"]
                 if pss_level != "": level = pss_level
                 if dic_chart["tools"]["pss"]["date"] > max_date:
                     max_date = dic_chart["tools"]["pss"]["date"]
@@ -74,34 +69,51 @@ def generate_docs():
         if level not in count: count[level] = 1
         else: count[level] += 1
 
+    # Badrobot -----------------------------------------------------------
     print("# Calculate Badrobot statistics")
 
+    # Initi Badrobot bucket calc
+    br_buckets = {}
+    br_min_buckets = -700
+    br_size_buckets = -50
+    br_min = br_non_evaluable = br_no_workload = br_blank = br_zero = 0
+    for i in range(0, br_min_buckets, br_size_buckets):
+        br_buckets[str(i)] = 0
+
+    i=0
     for key in keys:
         dic_chart = charts_db[key]
         level = "unknown"
         i += 1
 
         if "status" in dic_chart and "cache" in dic_chart["status"]:
-            # default status includes error downloading chart or generating the template
+            # status includes error downloading chart or generating the template
             level = dic_chart["status"]["cache"]
-
-        if "tools" not in dic_chart:
-            print( "No tools evaluation for %s" % dic_chart["repository"]["name"] )
+        if level[0:5] == "error":
+            print( "Skipping chart in error %s" % dic_chart["repository"]["name"] )
+            br_non_evaluable += 1
+        elif "tools" not in dic_chart or \
+            "badrobot" not in dic_chart["tools"] or \
+            "data"     not in dic_chart["tools"]["badrobot"] or \
+            "score"    not in dic_chart["tools"]["badrobot"]["data"]:
+            print( "No badrobot evaluation for %s" % dic_chart["repository"]["name"] )
+            br_non_evaluable += 1
         else:
-            if "badrobot" in dic_chart["tools"]:
-                score = dic_chart["tools"]["badrobot"]["score"]
-                if score == "":
-                    br_non_evaluable += 1
-                elif level in ["empty_no_object", "no_pod_object_but_crd", "no_pod_object"]:
-                    # TODO: decouple from PSS evaluation
-                    br_no_workload += 1
-                else:
-                    score = int(score)
-                    if score < brmin: brmin = int(score)
-                    for i in range(0, br_min_buckets + br_size_buckets, br_size_buckets):
-                        if i >= score and score > ( i + br_size_buckets ):
-                            brbuckets[str(i)] += 1
-                            break
+            score = dic_chart["tools"]["badrobot"]["data"]["score"]
+            if score == "":
+                print( "Blank score for %s" % dic_chart["repository"]["name"] )
+                br_blank += 1
+            elif level in ["empty_no_object", "no_pod_object_but_crd", "no_pod_object"]:
+                # TODO: decouple from PSS evaluation
+                br_no_workload += 1
+            else:
+                score = int(score)
+                if score < br_min: br_min = int(score)
+                if score == 0: br_zero += 1
+                for i in range(0, br_min_buckets + br_size_buckets, br_size_buckets):
+                    if i >= score and score > ( i + br_size_buckets ):
+                        br_buckets[str(i)] += 1
+                        break
 
 
     header = "[Go to root documentation](https://vicenteherrera.com/secobs-charts)  \n"
@@ -133,11 +145,13 @@ def generate_docs():
     # list_md.write("Worse score: " + str(brmin)+"\n\n")
     list_md.write("| Score | Number of charts |\n|------|------|\n")
     list_md.write("| Non-evaluable | " + str(br_non_evaluable) + " |\n")
+    list_md.write("| Blank score | " + str(br_blank) + " |\n")
     list_md.write("| No workload | " + str(br_no_workload) + " |\n")
+    list_md.write("| Score == 0 | " + str(br_zero) + " |\n")
 
-    keys = brbuckets.keys()
+    keys = br_buckets.keys()
     for key in keys:
-        list_md.write("| [" + str(key) + ", " + str(int(key) + br_size_buckets) + ") | " + str(brbuckets[key]) + " |\n")
+        list_md.write("| [" + str(key) + ", " + str(int(key) + br_size_buckets) + ") | " + str(br_buckets[key]) + " |\n")
 
     list_md.write("\n### Charts list\n\n")
 
