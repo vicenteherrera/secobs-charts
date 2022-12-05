@@ -30,7 +30,6 @@ def generate_docs():
         "baseline":0,
         "restricted":0,
         "error_download":0,
-        "error_template":0,
     }
     calpha = {}
     for l in ascii_lowercase:

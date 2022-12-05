@@ -9,7 +9,7 @@ import charts_eval.evaluation.utils as utils
 # -----------------------------------------------------------------------
 
 def generate_templates():
-    print( "# Reading charts list files" )
+    print( "# Reading charts data files" )
     print( "  1. reading AH source file " )
     charts_db_source = utils.load_yaml( config.charts_source_filename )
     if os.path.exists( config.charts_db_filename ):
