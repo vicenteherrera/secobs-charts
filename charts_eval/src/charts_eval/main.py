@@ -3,7 +3,8 @@ import sys
 import sys
 
 from charts_eval.evaluation.evaluate import evaluate_tools, generate_templates
-from charts_eval.postprocess.generate_docs import generate_docs
+from charts_eval.postprocess.docs import generate_docs
+from charts_eval.postprocess.data import generate_data
 
 def help():
     print("**Error, expected one parameter for a command")
@@ -29,7 +30,9 @@ def cli(args=None):
     elif (command == 'evaluate'):
         evaluate_tools(param)
     elif (command == 'postprocess'):
+        generate_data()
         generate_docs()
+        
     else:
         print("Command not recognized: %s" % command)
         sys.exit(1)

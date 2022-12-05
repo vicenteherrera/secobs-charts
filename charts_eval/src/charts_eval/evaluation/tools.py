@@ -71,8 +71,6 @@ def _evaluate_pss(chart: Chart) -> dict:
         "status": "evaluated",
         "data": {
             "level" : level,
-            "log_restricted": log_restricted,
-            "log_baseline": log_baseline,
             "n_evaluated": n_evaluated, 
             "n_non_evaluable":n_non_evaluable,
             "n_crd": n_crd,
