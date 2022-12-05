@@ -3,9 +3,9 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:13:14
+Evaluation date: 2022-12-05, 16:13:52
 
-[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
+[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
 | repo | chart | PSS level | BadRobot score | chart version | app version |
 |------|------|------|------|------|------|
@@ -66,7 +66,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [nessus](https://freddo256.github.io/nessus-kubernetes-argocd/helm/charts) | nessus |  |  | 0.2.0 | latest |
 | [netapp-trident](https://netapp.github.io/trident-helm-chart) | trident-operator |  |  | 22.10.0 | 22.10.0 |
 | [netdata](https://netdata.github.io/helmchart) | netdata |  |  | 3.7.34 | v1.37.0 |
-| [netrisai](https://netrisai.github.io/charts/) | netris-controller |  |  | 1.3.0-rc.3 | 3.3.0-rc.3 |
+| [netrisai](https://netrisai.github.io/charts/) | netris-controller |  |  | 1.3.0-rc.4 | 3.3.0-rc.4 |
 | [netrisai](https://netrisai.github.io/charts/) | netris-operator |  |  | 1.0.1 | v2.0.1 |
 | [netsoc](https://netsoc.github.io/charts/) | accounts |  |  | 0.2.4 | 0.2.3 |
 | [netsoc](https://netsoc.github.io/charts/) | docs |  |  | 0.2.0 | latest |
@@ -94,7 +94,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [nfs-subdir-external-provisioner](https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner) | nfs-subdir-external-provisioner |  |  | 4.0.17 | 4.0.2 |
 | [ng-speech](oci://registry-1.docker.io/newtontechnologies/ng-speech) | ng-speech |  |  | 2.0.7 | 2.0.1 |
 | [nginx-app](https://brackly.github.io/Helm-deployment-to-Kubernetes-using-ArgoCD/charts) | nginx-app |  |  | 0.1.2 | 1.16.0 |
-| [nginx-edge](https://helm.nginx.com/edge) | nginx-ingress |  |  | 0.0.0-edge | 2.4.1 |
+| [nginx-edge](https://helm.nginx.com/edge) | nginx-ingress |  |  | 0.0.0-edge | 2.4.2 |
 | [nginx-ingress-controller](https://ralvarezmar.github.io/nginx-ingress/) | ingress-nginx |  |  | 4.0.13 | 1.1.0 |
 | [nginx-test](http://175.24.198.168:8080) | mychart |  |  | 0.1.0 | 0.1.0 |
 | [nginx-test](http://175.24.198.168:8080) | nginx |  |  | 13.2.12 | 1.23.1 |

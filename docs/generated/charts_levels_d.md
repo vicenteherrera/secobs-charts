@@ -3,9 +3,9 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:13:14
+Evaluation date: 2022-12-05, 16:13:52
 
-[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
+[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
 | repo | chart | PSS level | BadRobot score | chart version | app version |
 |------|------|------|------|------|------|
@@ -25,7 +25,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [dask](https://helm.dask.org/) | daskhub |  |  | 2022.11.0 | jh2.0.0-dg2022.10.0 |
 | [dasmeta](https://dasmeta.github.io/helm/) | base |  |  | 0.1.35 | 0.1.35 |
 | [dasmeta](https://dasmeta.github.io/helm/) | base-cronjob |  |  | 0.1.32 | 0.1.32 |
-| [dasmeta](https://dasmeta.github.io/helm/) | cloudwatch-agent-prometheus |  |  | 0.1.0 | 0.0.1 |
+| [dasmeta](https://dasmeta.github.io/helm/) | cloudwatch-agent-prometheus |  |  | 0.2.0 | 0.0.1 |
 | [dasmeta](https://dasmeta.github.io/helm/) | helm-chart-test |  |  | 0.1.3 | 1.0 |
 | [dasmeta](https://dasmeta.github.io/helm/) | mongodb-backup-aws |  |  | 0.1.0 | 1.16.0 |
 | [dasmeta](https://dasmeta.github.io/helm/) | weave-scope |  |  | 1.0.1 | 1.10.1 |
@@ -82,7 +82,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [datawire](https://getambassador.io/) | ambassador-operator |  |  | 0.3.0 | v1.3.0 |
 | [datawire](https://getambassador.io/) | edge-stack |  |  | 8.3.0 | 3.3.0 |
 | [datawire](https://getambassador.io/) | emissary-ingress |  |  | 8.3.0 | 3.3.0 |
-| [datawire](https://getambassador.io/) | telepresence |  |  | 2.9.4-rc.1 | 2.9.4-rc.1 |
+| [datawire](https://getambassador.io/) | telepresence |  |  | 2.9.4 | 2.9.4 |
 | [david-pages](https://ddhall1949.github.io) | pages |  |  | 1.0.0 | 1.0 |
 | [db-operator](https://www.plumdog.co.uk/db-operator/) | db-operator |  |  | 0.1.0 | 1.16.0 |
 | [debasish-pages](https://debasish-martha.github.io) | pages |  |  | 1.0.0 | 1.0 |
@@ -97,7 +97,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [deliveryhero](https://charts.deliveryhero.io/) | aws-s3-proxy |  |  | 0.1.3 | 2.0 |
 | [deliveryhero](https://charts.deliveryhero.io/) | aws-service-events-exporter |  |  | 1.0.5 | 1.0.0 |
 | [deliveryhero](https://charts.deliveryhero.io/) | aws-storage-class |  |  | 0.1.4 |  |
-| [deliveryhero](https://charts.deliveryhero.io/) | backstage |  |  | 0.1.12 | v0.1.1-alpha.23 |
+| [deliveryhero](https://charts.deliveryhero.io/) | backstage |  |  | 0.1.13 | v0.1.1-alpha.23 |
 | [deliveryhero](https://charts.deliveryhero.io/) | backstage-mono |  |  | 0.1.1 | 0.0.1 |
 | [deliveryhero](https://charts.deliveryhero.io/) | cachet |  |  | 1.3.2 | 2.3.15 |
 | [deliveryhero](https://charts.deliveryhero.io/) | cloudhealth-collector |  |  | 0.1.6 | 957 |
@@ -195,7 +195,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [devopstales](https://devopstales.github.io/helm-charts) | kuberos |  |  | 0.2.2 | 2018-07-03 |
 | [devopstales](https://devopstales.github.io/helm-charts) | kyverno |  |  | 2.5.1 | v1.7.1 |
 | [devopstales](https://devopstales.github.io/helm-charts) | permission-manager |  |  | 1.8.0 | 1.7.1-rc1 |
-| [devopstales](https://devopstales.github.io/helm-charts) | pushprox |  |  | 0.1.6 | 0.1.0 |
+| [devopstales](https://devopstales.github.io/helm-charts) | pushprox |  |  | 0.1.4 | 0.1.0 |
 | [devopstales](https://devopstales.github.io/helm-charts) | trivy-operator |  |  | 2.5.0 | 0.23.0 |
 | [devopsweekly](https://zufardhiyaulhaq.com/devopsweekly/charts/releases/) | devopsweekly |  |  | 2.0.0 | 2.0.0 |
 | [devplayer0](https://devplayer0.github.io/charts/) | dnsmasq |  |  | 0.1.5 | 0.1.1 |
@@ -370,7 +370,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [dr300481](https://300481.github.io/charts/) | seafile |  |  | 0.5.0 | 8.0.5 |
 | [dr300481](https://300481.github.io/charts/) | shield |  |  | 0.3.1 | 0.3.1 |
 | [dragonchain](https://dragonchain-charts.s3.amazonaws.com) | dragonchain-k8s |  |  | 1.0.9 | 4.5.0 |
-| [dragonfly](https://dragonflyoss.github.io/helm-charts/) | dragonfly |  |  | 0.8.9 | 0.8.9 |
+| [dragonfly](https://dragonflyoss.github.io/helm-charts/) | dragonfly |  |  | 0.9.0 | 0.9.0 |
 | [dreyg-jescribanob-chart-eoloplanner](https://raw.githubusercontent.com/dreyg/mca_urjc/master/modulo_3_AN/3.2/p4/charts/) | eoloplanner |  |  | 0.1.0 | 1.16.0 |
 | [drogue-iot](https://drogue-iot.github.io/drogue-cloud-helm-charts/) | drogue-cloud-common |  |  | 0.7.3 |  |
 | [drogue-iot](https://drogue-iot.github.io/drogue-cloud-helm-charts/) | drogue-cloud-core |  |  | 0.7.3 | 0.11.0 |

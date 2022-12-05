@@ -3,9 +3,9 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:13:14
+Evaluation date: 2022-12-05, 16:13:52
 
-[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
+[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
 | repo | chart | PSS level | BadRobot score | chart version | app version |
 |------|------|------|------|------|------|
@@ -109,7 +109,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [medewerkercatalogus](https://raw.githubusercontent.com/ConductionNL/medewerkercatalogus/master/api/helm/) | medewerkercatalogus |  |  | 1.0.0 | V1.0 |
 | [mediawiki-backup](https://fernferret.github.io/mediawiki-backup) | mediawiki-backup |  |  | 0.1.3 | v0.1.1 |
 | [memo-component](https://raw.githubusercontent.com/ConductionNL/memo-component/master/api/helm/) | memo-component |  |  | 1.0.0 | V1.0 |
-| [memphis](https://k8s.memphis.dev/charts/) | memphis |  |  | 0.4.1 | 0.4.1 |
+| [memphis](https://k8s.memphis.dev/charts/) | memphis |  |  | 0.4.2 | 0.4.2 |
 | [mercure](https://charts.mercure.rocks) | mercure |  |  | 0.14.2 | v0.14.2 |
 | [meshery](https://meshery.io/charts/) | meshery |  |  | 0.6.31 | v0.6.31 |
 | [meshery](https://meshery.io/charts/) | meshery-operator |  |  | 0.6.31 | v0.6.31 |
@@ -239,7 +239,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [minecraft-server-charts](https://itzg.github.io/minecraft-server-charts/) | rcon-web-admin |  |  | 1.0.0 | 0.14.1-1 |
 | [minio-official](https://charts.min.io) | minio |  |  | 5.0.1 | RELEASE.2022-11-11T03-44-20Z |
 | [minio](https://helm.min.io/) | minio |  |  | 8.0.10 | master |
-| [mint](https://mintproject.github.io/mint) | mint |  |  | 2.0.3 | 1.16.1 |
+| [mint](https://mintproject.github.io/mint) | mint |  |  | 2.1.0 | 1.16.1 |
 | [mintel](https://mintel.github.io/helm-charts) | aws-api-gateway-operator |  |  | 0.1.0 | v1.0.2 |
 | [mintel](https://mintel.github.io/helm-charts) | basic-config |  |  | 0.2.0 |  |
 | [mintel](https://mintel.github.io/helm-charts) | hybrid-consul-config-crds |  |  | 0.0.2 |  |
@@ -314,8 +314,8 @@ Evaluation date: 2022-12-04, 21:13:14
 | [mongodb-helm-charts](https://mongodb.github.io/helm-charts) | community-operator-crds |  |  | 0.7.6 | 0.7.6 |
 | [mongodb-helm-charts](https://mongodb.github.io/helm-charts) | enterprise-database |  |  | 1.13.0 |  |
 | [mongodb-helm-charts](https://mongodb.github.io/helm-charts) | enterprise-operator |  |  | 1.17.2 |  |
-| [mongodb-helm-charts](https://mongodb.github.io/helm-charts) | mongodb-atlas-operator |  |  | 1.4.1 | 1.4.1 |
-| [mongodb-helm-charts](https://mongodb.github.io/helm-charts) | mongodb-atlas-operator-crds |  |  | 1.4.1 | 1.4.1 |
+| [mongodb-helm-charts](https://mongodb.github.io/helm-charts) | mongodb-atlas-operator |  |  | 1.5.0 | 1.5.0 |
+| [mongodb-helm-charts](https://mongodb.github.io/helm-charts) | mongodb-atlas-operator-crds |  |  | 1.5.0 | 1.5.0 |
 | [mongodb-helm-charts](https://mongodb.github.io/helm-charts) | sample-app |  |  | 0.1.0 | 0.1.0 |
 | [mongoose](https://esl.github.io/MongooseHelm/) | mongooseim |  |  | 0.3.5 | 5.1.0 |
 | [mongoose](https://esl.github.io/MongooseHelm/) | mongoosepush |  |  | 0.1.1 | 2.1.0 |

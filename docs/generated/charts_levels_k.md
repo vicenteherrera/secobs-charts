@@ -3,9 +3,9 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:13:14
+Evaluation date: 2022-12-05, 16:13:52
 
-[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
+[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
 | repo | chart | PSS level | BadRobot score | chart version | app version |
 |------|------|------|------|------|------|
@@ -63,7 +63,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [k8sdb-controller](https://doodlescheduling.github.io/k8sdb-controller) | k8sdb-controller |  |  | 0.1.2 | v0.0.1 |
 | [k8skeycloak-controller](https://doodlescheduling.github.io/k8skeycloak-controller) | k8skeycloak-controller |  |  | 0.1.2 | v0.0.1 |
 | [k8soauth2-proxy-controller](https://doodlescheduling.github.io/k8soauth2-proxy-controller) | k8soauth2-proxy-controller |  |  | 0.1.5 | v0.1.2 |
-| [k8sonlab](https://charts.billias.cc) | librephotos |  |  | 0.202245.1 | 2022w45 |
+| [k8sonlab](https://charts.billias.cc) | librephotos |  |  | 0.202245.2 | 2022w45 |
 | [k8sprom-patch-controller](https://doodlescheduling.github.io/k8sprom-patch-controller) | k8sprom-patch-controller |  |  | 0.1.4 | v0.1.2 |
 | [k8ssandra-lightweight](https://abhijithganesh.tech/dokc-helm-chart/) | dokc-k8ssandra-lightweight |  |  | 0.1.0 |  |
 | [k8ssandra](https://helm.k8ssandra.io/) | backup |  |  | 0.26.0 |  |
@@ -171,7 +171,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [kokuwa](https://kokuwaio.github.io/helm-charts) | fluentd-elasticsearch |  |  | 13.8.0 | v4.2.3 |
 | [kokuwa](https://kokuwaio.github.io/helm-charts) | mysqldump |  |  | 6.0.0 | v3.0.16 |
 | [kokuwa](https://kokuwaio.github.io/helm-charts) | visual-regression-tracker |  |  | 1.1.0 | 4.20.5 |
-| [komodor](https://helm-charts.komodor.io) | k8s-watcher |  |  | 1.0.20 | 0.1.151 |
+| [komodor](https://helm-charts.komodor.io) | k8s-watcher |  |  | 1.0.21 | 0.1.152 |
 | [kong-mesh](https://kong.github.io/kong-mesh-charts) | kong-mesh |  |  | 2.0.0 | 2.0.0 |
 | [kong-z](https://charts.kong-z.com/) | graylog |  |  | 2.2.0 | 4.3.8 |
 | [kong](https://charts.konghq.com) | kong |  |  | 2.13.1 | 3.0 |
@@ -322,8 +322,8 @@ Evaluation date: 2022-12-04, 21:13:14
 | [kubeshop](https://kubeshop.github.io/helm-charts) | kusk-gateway-api |  |  | 0.1.25 | v1.2.1 |
 | [kubeshop](https://kubeshop.github.io/helm-charts) | kusk-gateway-dashboard |  |  | 0.1.17 | v1.2.5 |
 | [kubeshop](https://kubeshop.github.io/helm-charts) | kusk-gateway-envoyfleet |  |  | 0.0.7 | v0.0.0 |
-| [kubeshop](https://kubeshop.github.io/helm-charts) | testkube |  |  | 1.7.60 |  |
-| [kubeshop](https://kubeshop.github.io/helm-charts) | testkube-api |  |  | 1.7.21 | 1.7.21 |
+| [kubeshop](https://kubeshop.github.io/helm-charts) | testkube |  |  | 1.7.62 |  |
+| [kubeshop](https://kubeshop.github.io/helm-charts) | testkube-api |  |  | 1.7.23 | 1.7.23 |
 | [kubeshop](https://kubeshop.github.io/helm-charts) | testkube-dashboard |  |  | 1.9.2 | 1.9.2 |
 | [kubeshop](https://kubeshop.github.io/helm-charts) | testkube-operator |  |  | 1.7.1 |  |
 | [kubeshop](https://kubeshop.github.io/helm-charts) | tracetest |  |  | 0.2.26 | v0.8.2 |
@@ -401,7 +401,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [kubmeta](https://charts.kubmeta.com/) | laravel |  |  | 4.2.7 | 8.0.0 |
 | [kubmod](https://kubemod.github.io/kubemod-helm/) | kubemod |  |  | 0.3.0 | 0.13.0 |
 | [kubservice-charts](https://kubeservice-stack.github.io/kubservice-charts/) | prometheus-pingmesh-exporter |  |  | 1.0.1 | 1.0.1 |
-| [kuma](https://kumahq.github.io/charts) | kuma |  |  | 2.0.0 | 2.0.0 |
+| [kuma](https://kumahq.github.io/charts) | kuma |  |  | 2.0.1 | 2.0.1 |
 | [kumardeb](https://kumardeb.github.io/kumerdeb.github.io/) | pages |  |  | 1.0.0 | 1.0 |
 | [kumusoft](https://identity-for-africa.github.io/kumusoft-helm/) | payment-gateway |  |  | 12.0.1 |  |
 | [kumusoft](https://identity-for-africa.github.io/kumusoft-helm/) | payment-portal |  |  | 12.0.1 |  |

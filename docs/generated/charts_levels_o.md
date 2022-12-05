@@ -3,9 +3,9 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:13:14
+Evaluation date: 2022-12-05, 16:13:52
 
-[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
+[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
 | repo | chart | PSS level | BadRobot score | chart version | app version |
 |------|------|------|------|------|------|
@@ -70,7 +70,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [onechart](https://chart.onechart.dev) | namespaces |  |  | 0.3.0 |  |
 | [onechart](https://chart.onechart.dev) | onechart |  |  | 0.41.0 |  |
 | [oneconvergence](https://oneconvergence.github.io/dkube-helm) | dkube-deployer |  |  | 1.0.8 |  |
-| [onedev](https://dl.cloudsmith.io/public/onedev/onedev/helm/charts/) | onedev |  |  | 7.8.6 | 7.8.6 |
+| [onedev](https://dl.cloudsmith.io/public/onedev/onedev/helm/charts/) | onedev |  |  | 7.8.7 | 7.8.7 |
 | [onepassword-connect](https://1password.github.io/connect-helm-charts) | connect |  |  | 1.9.0 | 1.5.7 |
 | [onesaitplatformhelmchart](https://helm.onesaitplatform.com/) | onesaitplatform-ce-base-chart |  |  | 1.0.0-ce | 1.0.0-ce |
 | [onlinejudge](https://thetkpark.github.io/onlinejudge-helm-chart) | onlinejudge |  |  | 0.1.0 | 20210326-c7b2b |
@@ -311,7 +311,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [openshift](https://charts.openshift.io/) | eap-xp4 |  |  | 1.0.0 | 4.0 |
 | [openshift](https://charts.openshift.io/) | eap74 |  |  | 1.1.0 | 7.4 |
 | [openshift](https://charts.openshift.io/) | elasticsearch-sed |  |  | 1.0.0 | 1.0.0 |
-| [openshift](https://charts.openshift.io/) | ibm-object-storage-plugin |  |  | 2.2.1 | 2.2.1 |
+| [openshift](https://charts.openshift.io/) | ibm-object-storage-plugin |  |  | 2.2.4 | 2.2.4 |
 | [openshift](https://charts.openshift.io/) | ibm-oms-ent-prod |  |  | 6.0.2 | 10.0.0 |
 | [openshift](https://charts.openshift.io/) | ibm-oms-pro-prod |  |  | 6.0.2 | 10.0.0 |
 | [openshift](https://charts.openshift.io/) | ibm-operator-catalog-enablement |  |  | 1.2.2 | 1.1.0 |
@@ -460,7 +460,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [osc](https://osc.github.io/osc-helm-charts) | osc-common |  |  | 0.5.0 | 0.1.0 |
 | [osc](https://osc.github.io/osc-helm-charts) | prometheus |  |  | 0.15.2 | v2.35.0 |
 | [osc](https://osc.github.io/osc-helm-charts) | webservice |  |  | 0.24.0 | 0.1.0 |
-| [osm-edge](http://flomesh-io.github.io/osm-edge) | osm-edge |  |  | 1.3.0-beta.1 | 1.3.0-beta.1 |
+| [osm-edge](http://flomesh-io.github.io/osm-edge) | osm-edge |  |  | 1.3.0-beta.2 | 1.3.0-beta.2 |
 | [oteemo-charts](https://oteemo.github.io/charts) | che |  |  | 0.1.5 | 7.3.1 |
 | [otel-contrib-test](https://gusdebbaja.github.io/splunk-otel-collector-chart/) | o11y-collector |  |  | 0.3.0 |  |
 | [otel-contrib-test](https://gusdebbaja.github.io/splunk-otel-collector-chart/) | splunk-otel-collector |  |  | 0.39.0 | 0.39.0 |

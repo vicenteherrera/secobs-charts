@@ -4,7 +4,7 @@
 ## Artifact Hub's Helm charts evaluation
 
 Source: [Artifact Hub](https://artifacthub.io/)  
-Evaluation date: 2022-12-04, 21:13:14
+Evaluation date: 2022-12-05, 16:13:52
 
 ### Pod Security Standards (PSS)
 
@@ -12,13 +12,13 @@ Evaluation date: 2022-12-04, 21:13:14
 
 | Category | Quantity | Percentage |
 |------|------|------|
-| Total | 9273 | 100.0% |
-| Privileged | 518 | 5.59% |
-| Baseline | 3449 | 37.19% |
+| Total | 9278 | 100.0% |
+| Privileged | 517 | 5.57% |
+| Baseline | 3451 | 37.2% |
 | Restricted | 34 | 0.37% |
-| Error_download | 8 | 0.09% |
-| Error_template | 0 | 0.0% |
-| Empty_no_object | 3363 | 36.27% |
+| Error_download | 398 | 4.29% |
+| Error_template | 2176 | 23.45% |
+| Empty_no_object | 801 | 8.63% |
 | No_pod_object_but_crd | 1253 | 13.51% |
 | Version_not_evaluable | 491 | 5.29% |
 | No_pod_object | 157 | 1.69% |
@@ -40,10 +40,12 @@ Legend:
 
 | Score | Number of charts |
 |------|------|
-| Non-evaluable | 3355 |
+| Non-evaluable | 2574 |
+| Blank score | 785 |
 | No workload | 0 |
-| [0, -50) | 5598 |
-| [-50, -100) | 218 |
+| Score == 0 | 2199 |
+| [0, -50) | 5600 |
+| [-50, -100) | 217 |
 | [-100, -150) | 67 |
 | [-150, -200) | 16 |
 | [-200, -250) | 8 |
@@ -61,4 +63,4 @@ Legend:
 
 Alphabetical list of all repositories (number of charts in parenthesis):
 
-[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
+[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 

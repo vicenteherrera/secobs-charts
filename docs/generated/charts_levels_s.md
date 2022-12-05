@@ -3,9 +3,9 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:13:14
+Evaluation date: 2022-12-05, 16:13:52
 
-[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
+[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
 | repo | chart | PSS level | BadRobot score | chart version | app version |
 |------|------|------|------|------|------|
@@ -386,7 +386,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [snowplow-devops](https://snowplow-devops.github.io/helm-charts) | dockerconfigjson |  |  | 0.1.0 |  |
 | [snowplow-devops](https://snowplow-devops.github.io/helm-charts) | github-actions-runners |  |  | 0.1.0 |  |
 | [snowplow-devops](https://snowplow-devops.github.io/helm-charts) | service-deployment |  |  | 0.4.1 |  |
-| [snowplow-devops](https://snowplow-devops.github.io/helm-charts) | snowplow-iglu-server |  |  | 0.1.7 | 0.8.6 |
+| [snowplow-devops](https://snowplow-devops.github.io/helm-charts) | snowplow-iglu-server |  |  | 0.1.8 | 0.8.7 |
 | [snyk](https://snyk.github.io/kubernetes-monitor/) | snyk-monitor |  |  | 1.100.0 |  |
 | [soblivionscall](https://soblivionscall.github.io/charts/) | space-engineers |  |  | 1.0.2 | 1.0.0 |
 | [soblivionscall](https://soblivionscall.github.io/charts/) | speedtest-tracker |  |  | 3.0.4 | 1.0.0 |
@@ -445,7 +445,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [someblackmagic](https://someblackmagic.github.io/helm-charts/) | atlassian-jira |  |  | 3.3.2 | 8.14.0 |
 | [someblackmagic](https://someblackmagic.github.io/helm-charts/) | banzaicloud-logging-operator-monitoring |  |  | 1.0.0 | 1.0.0 |
 | [someblackmagic](https://someblackmagic.github.io/helm-charts/) | cilium-monitoring |  |  | 0.1.3 | 0.1.3 |
-| [someblackmagic](https://someblackmagic.github.io/helm-charts/) | grafana-dashboards-rancher |  |  | 0.1.2 | 0.1.2 |
+| [someblackmagic](https://someblackmagic.github.io/helm-charts/) | grafana-dashboards-rancher |  |  | 0.3.0 | 0.3.0 |
 | [someblackmagic](https://someblackmagic.github.io/helm-charts/) | ingress-nginx-monitoring |  |  | 1.0.1 | 1.0.1 |
 | [someblackmagic](https://someblackmagic.github.io/helm-charts/) | kube-monitoring |  |  | 0.1.0 | 0.1.0 |
 | [someblackmagic](https://someblackmagic.github.io/helm-charts/) | longhorn-monitoring |  |  | 1.0.0 | 1.0.0 |
@@ -500,7 +500,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [stage](https://yacinegomycode.github.io/stageaddin/) | stage |  |  | 0.1.0 | 1.0 |
 | [stakater](https://stakater.github.io/stakater-charts) | alertmanager |  |  | 1.0.16 |  |
 | [stakater](https://stakater.github.io/stakater-charts) | allure |  |  | 1.0.1 | 1.0.0 |
-| [stakater](https://stakater.github.io/stakater-charts) | application |  |  | 1.3.2 |  |
+| [stakater](https://stakater.github.io/stakater-charts) | application |  |  | 1.3.3 |  |
 | [stakater](https://stakater.github.io/stakater-charts) | cerebro |  |  | 0.5.1 | 0.8.1 |
 | [stakater](https://stakater.github.io/stakater-charts) | chartmuseum |  |  | 1.8.0 | 0.8.0 |
 | [stakater](https://stakater.github.io/stakater-charts) | chartmuseum-storage |  |  | 1.0.12 |  |
@@ -578,7 +578,7 @@ Evaluation date: 2022-12-04, 21:13:14
 | [stakater](https://stakater.github.io/stakater-charts) | stakater-github-update-cd-repo |  |  | 1.0.8 | 1.0.0 |
 | [stakater](https://stakater.github.io/stakater-charts) | stakater-gitlab-update-cd-repo |  |  | 1.0.2 | 1.16.0 |
 | [stakater](https://stakater.github.io/stakater-charts) | stakater-helm-push |  |  | 1.0.1 | 1.16.0 |
-| [stakater](https://stakater.github.io/stakater-charts) | stakater-push-main-tag |  |  | 1.0.1 | 1.16.0 |
+| [stakater](https://stakater.github.io/stakater-charts) | stakater-push-main-tag |  |  | 1.0.2 | 1.16.0 |
 | [stakater](https://stakater.github.io/stakater-charts) | stakater-tekton-chart |  |  | 3.5.3 |  |
 | [stakater](https://stakater.github.io/stakater-charts) | stakater-tenant-operator |  |  | 0.7.7 | 0.7.7 |
 | [stakater](https://stakater.github.io/stakater-charts) | storage |  |  | 1.0.7 | 1.0.0 |
@@ -628,63 +628,63 @@ Evaluation date: 2022-12-04, 21:13:14
 | [startechnica](https://startechnica.github.io/apps) | multus |  |  | 0.1.2 | v3.8 |
 | [startechnica](https://startechnica.github.io/apps) | st-common |  |  | 0.1.2 | 0.1.2 |
 | [startechnica](https://startechnica.github.io/apps) | unifi |  |  | 0.1.3 | v7.1.66 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos |  |  | 11.7.69 | 11.7.1 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-cerberus |  |  | 11.7.69 | 1.0.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-kraken |  |  | 11.7.69 | 1.1.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-litmus |  |  | 11.7.69 | 2.13.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-mesh |  |  | 11.7.69 | 2.4.1 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-monkey |  |  | 11.7.69 | 2.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-3scale |  |  | 11.7.69 | 0.8.4 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-acm |  |  | 11.7.69 | 2.6.1 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-acs |  |  | 11.7.69 | 3.72.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-ansible |  |  | 11.7.69 | 2.2.1 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-argocd |  |  | 11.7.69 | 1.5.6 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-auth |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-certmanager |  |  | 11.7.69 | 1.7.1 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-compliance |  |  | 11.7.69 | 0.1.53 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-config |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-console |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-couchbase |  |  | 11.7.69 | 2.3.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-gitlab |  |  | 11.7.69 | 6.4.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos |  |  | 11.7.75 | 11.7.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-cerberus |  |  | 11.7.75 | 1.0.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-kraken |  |  | 11.7.75 | 1.1.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-litmus |  |  | 11.7.75 | 2.13.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-mesh |  |  | 11.7.75 | 2.4.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | chaos-monkey |  |  | 11.7.75 | 2.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-3scale |  |  | 11.7.75 | 0.8.4 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-acm |  |  | 11.7.75 | 2.6.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-acs |  |  | 11.7.75 | 3.72.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-ansible |  |  | 11.7.75 | 2.2.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-argocd |  |  | 11.7.75 | 1.5.6 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-auth |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-certmanager |  |  | 11.7.75 | 1.7.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-compliance |  |  | 11.7.75 | 0.1.53 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-config |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-console |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-couchbase |  |  | 11.7.75 | 2.3.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-gitlab |  |  | 11.7.75 | 6.4.1 |
 | [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-gitlab-runner |  |  | 11.5.5 | 1.0.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-istio |  |  | 11.7.69 | 2.2.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-jenkins |  |  | 11.7.69 | 0.7.3 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-knative |  |  | 11.7.69 | 1.24.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-kubevirt |  |  | 11.7.69 | 1.7.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-localstorage |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-logging |  |  | 11.7.69 | 5.5.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-machine |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-metering |  |  | 11.7.69 | 0.14.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-nexus |  |  | 11.7.69 | 3.41.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-oadp |  |  | 11.7.69 | 1.1.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-ocs |  |  | 11.7.69 | 4.11.1 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-pipeline |  |  | 11.7.69 | 1.8.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-ptp |  |  | 11.7.69 | 4.11.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-quay |  |  | 11.7.69 | v3.7.8 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-rbac |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-router |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-sso |  |  | 11.7.69 | 7.6.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-storage |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-vault |  |  | 11.7.69 | 1.11.3 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-vault-config |  |  | 11.7.69 | 0.6.5 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-vpa |  |  | 11.7.69 | 4.11.0 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-workspace |  |  | 11.7.69 | 2.13.100 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-chaos |  |  | 11.7.69 | 11.7.1 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-couchbase |  |  | 11.7.69 | 2.2.1 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-deployment |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-fruitapp-app |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-fruitapp-project |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-fruitapp-shared |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-html |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-imagestreams |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-knative |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-php |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-pod |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | example-sxapi |  |  | 11.7.69 | 0.0.2 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | operator |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | project |  |  | 11.7.69 | 4.11.7 |
-| [startx](https://startxfr.github.io/helm-repository/packages/) | sxapi |  |  | 11.7.69 | 0.3.63 |
-| [starwhale](https://star-whale.github.io/charts/) | starwhale |  |  | 0.3.2 | 0.3.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-istio |  |  | 11.7.75 | 2.2.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-jenkins |  |  | 11.7.75 | 0.7.3 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-knative |  |  | 11.7.75 | 1.24.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-kubevirt |  |  | 11.7.75 | 1.7.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-localstorage |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-logging |  |  | 11.7.75 | 5.5.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-machine |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-metering |  |  | 11.7.75 | 0.14.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-nexus |  |  | 11.7.75 | 3.41.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-oadp |  |  | 11.7.75 | 1.1.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-ocs |  |  | 11.7.75 | 4.11.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-pipeline |  |  | 11.7.75 | 1.8.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-ptp |  |  | 11.7.75 | 4.11.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-quay |  |  | 11.7.75 | v3.7.8 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-rbac |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-router |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-sso |  |  | 11.7.75 | 7.6.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-storage |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-vault |  |  | 11.7.75 | 1.11.3 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-vault-config |  |  | 11.7.75 | 0.6.5 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-vpa |  |  | 11.7.75 | 4.11.0 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | cluster-workspace |  |  | 11.7.75 | 2.13.100 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-chaos |  |  | 11.7.75 | 11.7.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-couchbase |  |  | 11.7.75 | 2.2.1 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-deployment |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-fruitapp-app |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-fruitapp-project |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-fruitapp-shared |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-html |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-imagestreams |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-knative |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-php |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-pod |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | example-sxapi |  |  | 11.7.75 | 0.0.2 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | operator |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | project |  |  | 11.7.75 | 4.11.7 |
+| [startx](https://startxfr.github.io/helm-repository/packages/) | sxapi |  |  | 11.7.75 | 0.3.63 |
+| [starwhale](https://star-whale.github.io/charts/) | starwhale |  |  | 0.3.3 | 0.3.3 |
 | [statcan](https://statcan.github.io/charts) | aaw-financial-data-reconciliation |  |  | 0.1.5 | 1.0 |
 | [statcan](https://statcan.github.io/charts) | analytics-platform |  |  | 0.0.14 | 0.0.1 |
 | [statcan](https://statcan.github.io/charts) | argo-controller |  |  | 0.0.7 | 0.0.1 |

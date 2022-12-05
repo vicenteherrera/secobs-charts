@@ -3,9 +3,9 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-04, 21:13:14
+Evaluation date: 2022-12-05, 16:13:52
 
-[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(227)](./charts_levels_i)&nbsp; [J(180)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(232)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
+[main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
 | repo | chart | PSS level | BadRobot score | chart version | app version |
 |------|------|------|------|------|------|
@@ -59,9 +59,9 @@ Evaluation date: 2022-12-04, 21:13:14
 | [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | dealer |  |  | 0.1.27 | 0.1.56 |
 | [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | galoy |  |  | 0.8.7 | 0.5.13 |
 | [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | galoy-pay |  |  | 0.3.4 | 0.5.6 |
-| [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | lnd |  |  | 0.3.9 | 0.15.4 |
+| [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | lnd |  |  | 0.3.10 | 0.15.4 |
 | [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | monitoring |  |  | 0.1.21 | 0.1.0 |
-| [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | rtl |  |  | 0.1.6 | 0.10.2 |
+| [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | rtl |  |  | 0.1.7 | 0.10.2 |
 | [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | specter |  |  | 0.2.0 | 1.10.5 |
 | [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | stablesats |  |  | 0.3.18 | 0.3.17 |
 | [galoymoney2](https://github.com/GaloyMoney/charts/raw/gh-pages) | web-wallet |  |  | 0.1.42 | 0.2.56 |
@@ -70,9 +70,9 @@ Evaluation date: 2022-12-04, 21:13:14
 | [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | dealer |  |  | 0.1.27 | 0.1.56 |
 | [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | galoy |  |  | 0.8.7 | 0.5.13 |
 | [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | galoy-pay |  |  | 0.3.4 | 0.5.6 |
-| [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | lnd |  |  | 0.3.9 | 0.15.4 |
+| [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | lnd |  |  | 0.3.10 | 0.15.4 |
 | [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | monitoring |  |  | 0.1.21 | 0.1.0 |
-| [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | rtl |  |  | 0.1.6 | 0.10.2 |
+| [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | rtl |  |  | 0.1.7 | 0.10.2 |
 | [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | specter |  |  | 0.2.0 | 1.10.5 |
 | [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | stablesats |  |  | 0.3.18 | 0.3.17 |
 | [galoymoney](https://raw.githubusercontent.com/GaloyMoney/charts/gh-pages) | web-wallet |  |  | 0.1.42 | 0.2.56 |
@@ -328,10 +328,10 @@ Evaluation date: 2022-12-04, 21:13:14
 | [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | loki |  |  | 0.5.3 | 2.6.1 |
 | [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | nginx-ingress-controller-app |  |  | 2.20.0 | v1.4.0 |
 | [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | oauth2-proxy |  |  | 2.7.1 | 7.2.1 |
-| [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | prometheus-operator-app |  |  | 2.1.1 | v0.54.0 |
+| [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | prometheus-operator-app |  |  | 2.1.2 | v0.54.0 |
 | [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | prometheus-operator-crd |  |  | 2.0.1 | 0.54.0 |
 | [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | prometheus-pushgateway |  |  | 0.1.0 | 1.4.2 |
-| [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | promtail |  |  | 0.4.1 | 2.5.0 |
+| [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | promtail |  |  | 0.5.0 | 2.5.0 |
 | [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | rbac-bootstrap |  |  | 0.2.0 | 0.0.1 |
 | [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | rook-operator |  |  | 2.4.0 | 1.7.11 |
 | [giantswarm](https://giantswarm.github.io/giantswarm-catalog) | security-pack |  |  | 0.9.0 |  |
@@ -406,11 +406,11 @@ Evaluation date: 2022-12-04, 21:13:14
 | [gmelillo](https://helm.melillo.me/) | docker-registry-gc |  |  | 0.1.9 | 0.1.8 |
 | [gmelillo](https://helm.melillo.me/) | mailu |  |  | 1.0.9 | 1.9.29 |
 | [gmelillo](https://helm.melillo.me/) | ovpn-web-connector |  |  | 0.2.0 | 2021-01-09 |
-| [goauthentik](https://charts.goauthentik.io/) | authentik |  |  | 2022.11.0 | 2022.11.1 |
+| [goauthentik](https://charts.goauthentik.io/) | authentik |  |  | 2022.11.3 | 2022.11.3 |
 | [goauthentik](https://charts.goauthentik.io/) | authentik-remote-cluster |  |  | 1.0.3 | 2021.10.2 |
 | [gocd](https://gocd.github.io/helm-chart) | gocd |  |  | 2.0.0 | 22.3.0 |
 | [godbox](https://quantumsheep.github.io/godbox-helm/charts) | godbox |  |  | 0.2.0 | 2 |
-| [gogatekeeper](https://gogatekeeper.github.io/helm-gogatekeeper) | gatekeeper |  |  | 0.1.27 | 2.0.0 |
+| [gogatekeeper](https://gogatekeeper.github.io/helm-gogatekeeper) | gatekeeper |  |  | 0.1.28 | 2.0.0 |
 | [gohttpserver](https://yejing0609.github.io/gohttpserver-helm-chart/charts) | gohttpserver |  |  | 0.1.0 | 1.16.0 |
 | [gomods](https://athens.blob.core.windows.net/charts) | athens-proxy |  |  | 0.5.2 | 0.11.1 |
 | [gotway](https://charts.gotway.duckdns.org) | gotway |  |  | 0.7.0 | 0.0.2 |
@@ -467,17 +467,17 @@ Evaluation date: 2022-12-04, 21:13:14
 | [grafana](https://grafana.github.io/helm-charts) | grafana-agent-operator |  |  | 0.2.8 | 0.28.0 |
 | [grafana](https://grafana.github.io/helm-charts) | loki |  |  | 3.6.0 | 2.7.0 |
 | [grafana](https://grafana.github.io/helm-charts) | loki-canary |  |  | 0.10.0 | 2.6.1 |
-| [grafana](https://grafana.github.io/helm-charts) | loki-distributed |  |  | 0.66.8 | 2.6.1 |
+| [grafana](https://grafana.github.io/helm-charts) | loki-distributed |  |  | 0.67.0 | 2.6.1 |
 | [grafana](https://grafana.github.io/helm-charts) | loki-simple-scalable |  |  | 1.8.11 | 2.6.1 |
 | [grafana](https://grafana.github.io/helm-charts) | loki-stack |  |  | 2.8.7 | v2.6.1 |
 | [grafana](https://grafana.github.io/helm-charts) | mimir-distributed |  |  | 4.0.0-weekly.214 | r214 |
 | [grafana](https://grafana.github.io/helm-charts) | mimir-openshift-experimental |  |  | 2.1.0 | 2.0.0 |
 | [grafana](https://grafana.github.io/helm-charts) | oncall |  |  | 1.0.12 | v1.1.0 |
 | [grafana](https://grafana.github.io/helm-charts) | phlare |  |  | 0.1.1 | 0.1.0 |
-| [grafana](https://grafana.github.io/helm-charts) | promtail |  |  | 6.7.0 | 2.7.0 |
+| [grafana](https://grafana.github.io/helm-charts) | promtail |  |  | 6.7.1 | 2.7.0 |
 | [grafana](https://grafana.github.io/helm-charts) | rollout-operator |  |  | 0.2.0 | v0.2.0 |
 | [grafana](https://grafana.github.io/helm-charts) | synthetic-monitoring-agent |  |  | 0.1.0 | v0.9.3-0-gcd7aadd |
-| [grafana](https://grafana.github.io/helm-charts) | tempo |  |  | 0.16.6 | 1.5.0 |
+| [grafana](https://grafana.github.io/helm-charts) | tempo |  |  | 0.16.7 | 1.5.0 |
 | [grafana](https://grafana.github.io/helm-charts) | tempo-distributed |  |  | 0.27.10 | 1.5.0 |
 | [grafana](https://grafana.github.io/helm-charts) | tempo-vulture |  |  | 0.2.1 | 1.3.0 |
 | [grafregistratiecomponent](https://raw.githubusercontent.com/ConductionNL/grafregistratiecomponent/master/api/helm/) | grafregistratiecomponent |  |  | 1.0.0 | V1.0 |
