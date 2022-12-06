@@ -26,7 +26,7 @@ def cli(args=None):
         param = args[1]
 
     if (command == 'generate'):
-        generate_templates()
+        generate_templates(param)
     elif (command == 'evaluate'):
         evaluate_tools(param)
     elif (command == 'postprocess'):

@@ -29,7 +29,7 @@ def _evaluate_pss(chart: Chart) -> dict:
     n_wrong_version=0
     n_crd=0
     
-    if not os.path.exists(template):
+    if utils.is_file_empty(template):
         print("**Error, no template generated at %s" % template)
         sys.exit(1)
     else: 

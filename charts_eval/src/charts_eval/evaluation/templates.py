@@ -18,11 +18,18 @@ def _download_template( chart: Chart ) -> bool:
     print("  Downloading chart")
     url = parse.quote_plus(chart.url)
     log_helm = _log_helm(chart)
-    os.system( "helm repo add " + chart.repo + " " + url + " 1>" + log_helm + " 2>&1")
-    # TODO: Check if update is neccessary, .e.g.:
+
+    # TODO: Check if add / update is neccessary, .e.g.:
     # helm search repo prometheus-community/prometheus-to-sd -o yaml | yq .[0].version
+
+    # TODO: Avoid regenerating if helm log exists
+    os.system( "echo '# helm repo add " + chart.repo + " " + url + "' 1>" + log_helm + " 2>&1")
+    os.system( "helm repo add " + chart.repo + " " + url + " 1>>" + log_helm + " 2>&1")
+
+    os.system( "echo '# helm repo update " + chart.repo + "' 1>>" + log_helm + " 2>&1")
     repo_update = os.system( \
         "helm repo update " + chart.repo + " 1>>" + log_helm + " 2>&1")
+
     if repo_update >0 or utils.is_in_file("cannot be reached", log_helm):
         return True
     return False
@@ -35,7 +42,7 @@ def _generate_template( chart: Chart ) -> bool:
     template = _template_filename(chart)
     log_helm = _log_helm(chart)
     gen_template = 0
-    if not os.path.exists(template):
+    if not utils.is_file_empty(template):
         # TODO: retry previously errored templates
         print("  Generating template")
         command = "helm template " + \
@@ -50,7 +57,7 @@ def _generate_template( chart: Chart ) -> bool:
         return True
     return False
 
-def generate( charts_db_source: dict, charts_db: dict ):
+def generate( charts_db_source: dict, charts_db: dict, retry_errors: bool ):
     """Generate template files on cache dir and store status on charts db"""
     start = datetime.now()
     now = start.strftime("%Y-%m-%d, %H:%M:%S")
@@ -81,12 +88,18 @@ def generate( charts_db_source: dict, charts_db: dict ):
         # Generate template
         template = _template_filename(chart)
         error = False
-        if chart.is_error():
-            print("  **Error on previous chart evaluation")
-            nerror +=1
-            continue
+        if retry_errors == False:
+            if chart.is_error():
+                print("  **Error on previous chart evaluation")
+                nerror +=1
+                continue
+        else:
+            if not chart.is_error():
+                print("  Skipping chart not in error")
+                continue
         
-        if not os.path.exists( _log_helm(chart) ):
+        # TODO: or log_helm is error
+        if utils.is_file_empty( _log_helm(chart) ) or retry_errors == True:
             error = _download_template(chart)
 
         if error:
@@ -95,7 +108,7 @@ def generate( charts_db_source: dict, charts_db: dict ):
             template = ""   
             nerror += 1  
         else:
-            if os.path.exists( template ):
+            if not utils.is_file_empty( template ):
                 nexist += 1
             else:
                 error = _generate_template(chart)

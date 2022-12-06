@@ -1,5 +1,9 @@
 
 import yaml
+import os
+
+def is_file_empty(filepath: str) -> bool:
+    return not os.path.exists(filepath) or os.path.getsize( filepath ) < 4
 
 def is_in_file( str: str, filename: str ) -> bool:
     with open( filename, 'r' ) as fp:

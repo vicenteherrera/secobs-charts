@@ -26,6 +26,10 @@ download_charts_info:
 generate:
 	poetry run python3 src/charts_eval/main.py generate
 
+.PHONY: generate
+generate-retry-errors:
+	poetry run python3 src/charts_eval/main.py generate --retry-errors
+
 .PHONY: evaluate
 evaluate:
 	poetry run python3 src/charts_eval/main.py evaluate
@@ -63,7 +67,7 @@ test-e2e: reset-full
 
 .PHONY: download-result
 download-result:
-	ssh $$ONLINEHOST cd $$ONLINEPATH ; rm result.tgz ||: ; tar -czvf result.tgz ./result
+	ssh $$ONLINEHOST "cd $$ONLINEPATH ; rm result.tgz ||: ; tar -czvf result.tgz ./result"
 	scp $$ONLINEHOST:$$ONLINEPATH/result.tgz .
 	tar -xzvf result.tgz
 	rm result.tgz
