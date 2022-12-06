@@ -42,7 +42,7 @@ def _generate_template( chart: Chart ) -> bool:
     template = _template_filename(chart)
     log_helm = _log_helm(chart)
     gen_template = 0
-    if not utils.is_file_empty(template):
+    if utils.is_file_empty(template):
         # TODO: retry previously errored templates
         print("  Generating template")
         command = "helm template " + \
@@ -53,7 +53,10 @@ def _generate_template( chart: Chart ) -> bool:
         print("  Template cached")
         return False
     # template_data = Path(template).read_text()
-    if ( gen_template > 0 or utils.is_in_file("error", log_helm)):
+    if gen_template > 0 or \
+        utils.is_in_file("Use --debug flag to render out invalid YAML", log_helm) or \
+        utils.is_in_file("Error: failed to download", log_helm):
+        if os.path.exists(template): os.remove(template)
         return True
     return False
 

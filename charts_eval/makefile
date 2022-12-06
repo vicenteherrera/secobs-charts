@@ -55,6 +55,8 @@ reset-db:
 
 .PHONY: reset-full
 reset-full: reset-db reset-cache
+	rm -r $$HOME/.cache/helm/repository
+	mkdir -p $$HOME/.cache/helm/repository
 
 # Test --------------------------------------------------------
 
