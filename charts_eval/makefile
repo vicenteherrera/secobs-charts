@@ -1,6 +1,6 @@
 
 .PHONY: all
-all: install download_charts_info generate evaluate postprocess push
+all: install download-charts-source generate evaluate postprocess
 
 # Preparation --------------------------------------------------------
 
@@ -18,8 +18,8 @@ install:
 
 # Execution --------------------------------------------------------
 
-.PHONY: download_charts_info
-download_charts_info:
+.PHONY: download-charts-source
+download-charts-source:
 	helm search hub -o yaml > result/charts_ah_source.yaml
 
 .PHONY: generate
@@ -55,8 +55,10 @@ reset-db:
 
 .PHONY: reset-full
 reset-full: reset-db reset-cache
-	rm -r $$HOME/.cache/helm/repository
+	rm -r $$HOME/.cache/helm/repository ||:
+	rm -r $$HOME/.helm/repository ||:
 	mkdir -p $$HOME/.cache/helm/repository
+	mkdir -p $$HOME/.helm/repository
 
 # Test --------------------------------------------------------
 

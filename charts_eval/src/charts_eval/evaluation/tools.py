@@ -30,13 +30,13 @@ def _evaluate_pss(chart: Chart) -> dict:
     n_crd=0
     
     if utils.is_file_empty(template):
-        print("**Error, no template generated at %s" % template)
+        print("**Error, no template generated or empty at %s" % template)
         sys.exit(1)
     else: 
         print("  PSS evaluation: baseline")
-        baseline   = os.system("cat " + template + " | " + psa_checker_path + " --level baseline   -f - >" + log_baseline + " 2>&1")
+        baseline   = os.system('cat "' + template + '" | ' + psa_checker_path + " --level baseline   -f - >" + log_baseline + " 2>&1")
         print("  PSS evaluation: restricted")
-        restricted = os.system("cat " + template + " | " + psa_checker_path + " --level restricted -f - >" + log_restricted + " 2>&1")
+        restricted = os.system('cat "' + template + '" | ' + psa_checker_path + " --level restricted -f - >" + log_restricted + " 2>&1")
         n_evaluated     = utils.count_in_file("PSS level", log_restricted) - 1
         n_non_evaluable = utils.count_in_file("Kind not evaluable", log_restricted)
         n_wrong_version = utils.count_in_file("not evaluable for kind:", log_restricted)

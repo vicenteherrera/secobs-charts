@@ -16,7 +16,7 @@ def _log_helm( chart: Chart ) -> str:
 def _download_template( chart: Chart ) -> bool:
     """Returns True on error"""
     print("  Downloading chart")
-    url = parse.quote_plus(chart.url)
+    url = chart.url
     log_helm = _log_helm(chart)
 
     # TODO: Check if add / update is neccessary, .e.g.:
@@ -47,7 +47,7 @@ def _generate_template( chart: Chart ) -> bool:
         print("  Generating template")
         command = "helm template " + \
             '"' + parse.quote_plus(chart.repo) + "/" + parse.quote_plus(chart.name) + '"' + \
-            " --version " + chart.version + " >" + template + " 2>>" + log_helm
+            " --version " + chart.version + ' >"' + template + '" 2>>' + log_helm
         gen_template = os.system(command)
     else:
         print("  Template cached")

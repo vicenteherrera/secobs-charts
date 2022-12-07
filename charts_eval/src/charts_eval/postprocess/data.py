@@ -5,6 +5,7 @@ import charts_eval.config as config
 import charts_eval.evaluation.tools as tools
 import charts_eval.evaluation.templates as templates
 import charts_eval.evaluation.utils as utils
+from charts_eval.evaluation.chart import Chart
 
 def _anonymize_data(charts_db: dict) -> dict:
     new_db = []
@@ -27,13 +28,24 @@ def _anonymize_data(charts_db: dict) -> dict:
     
     return new_db
 
+def _error_db(charts_db: dict) -> dict:
+    new_db = {}
+    keys = charts_db.keys()
+
+    for key in keys:
+        chart = Chart(charts_db[key])
+
+        if chart.is_error():
+            new_db[key] = chart.get_dict()
+    return new_db
+
 def generate_data():
     print( "# Reading charts db" )
     if utils.is_file_empty( config.charts_db_filename ):
         print("**Error, charts db filename not found or empty: %s" % config.charts_db_filename )
     charts_db = utils.load_yaml( config.charts_db_filename )
-    print( "# Generating anonymous db copy" )
-    charts_db_anon = _anonymize_data( charts_db )
-    print( "# Saving anonymized charts db" )
-    utils.save_yaml( config.charts_db_anon_filename, charts_db_anon )
+    print( "# Generating db with anonymous data" )
+    utils.save_yaml( config.charts_db_anon_filename, _anonymize_data( charts_db ) )
+    print("# Generating db only with charts in error")
+    utils.save_yaml( config.charts_db_errors_filename, _error_db(charts_db) )
 
