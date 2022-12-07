@@ -15,7 +15,6 @@ def _log_helm( chart: Chart ) -> str:
 
 def _download_template( chart: Chart ) -> bool:
     """Returns True on error"""
-    print("  Downloading chart")
     url = chart.url
     log_helm = _log_helm(chart)
 
@@ -65,6 +64,7 @@ def generate( charts_db_source: dict, charts_db: dict, retry_errors: bool ):
     now = start.strftime("%Y-%m-%d, %H:%M:%S")
     # TODO: delete old log and templates to save disk space
     i = new = nerror = nexist = 0
+    total = len(charts_db_source)
     found=[]
     duplicated=[]
     for dic_chart in charts_db_source:
@@ -72,8 +72,8 @@ def generate( charts_db_source: dict, charts_db: dict, retry_errors: bool ):
         template=""
         status="generated"
         i+=1
-        print("# [%s/%s] %s / %s %s" % \
-            (i, len(charts_db_source), chart.repo, chart.name, chart.version))
+
+        print("# [%s/%s] %s" % (i, total, chart.get_chart_title()))
         
         # Store source chart keys to check duplicates
         # and if we have extra removed keys
@@ -90,18 +90,18 @@ def generate( charts_db_source: dict, charts_db: dict, retry_errors: bool ):
         # Generate template
         template = _template_filename(chart)
         error = False
-        if retry_errors == False:
-            if chart.is_error():
-                print("  **Error on previous chart evaluation, skipping")
-                nerror +=1
-                continue
-        else:
-            if not chart.is_error():
-                print("  Skipping chart not in error")
-                continue
+        if retry_errors == False and chart.is_error():
+            print("  **Error on previous chart evaluation, skipping")
+            nerror +=1
+            continue
+        
+        if retry_errors == True and not chart.is_error():
+            print("  Skipping chart not in error")
+            continue
         
         # TODO: or log_helm is error
         if utils.is_file_empty( _log_helm(chart) ) or retry_errors == True:
+            print("Downloading chart")
             error = _download_template(chart)
 
         if error:
@@ -111,8 +111,12 @@ def generate( charts_db_source: dict, charts_db: dict, retry_errors: bool ):
             nerror += 1  
         else:
             if not utils.is_file_empty( template ):
+                # Template exists, we do nothing
+                # but we don't skip in case file exists but not in the DB
                 nexist += 1
             else:
+                if os.path.exists( template ):
+                    print("  Generated template is empty, trying again")
                 error = _generate_template(chart)
                 if ( error ):
                     print("**Error generating template")

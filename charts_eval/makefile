@@ -73,7 +73,7 @@ test-e2e: reset-full
 download-result:
 	rm -r ./result ||:
 	mkdir -p ./result
-	echo "scp -C -r $$ONLINEHOST:$$ONLINEPATH/result/ ./result/"
+	echo "Downloading results from online server"
 	ssh $$ONLINEHOST "cd $$ONLINEPATH;tar zc result" | tar zx
 
 # Commit docs ---------------------------------------------------

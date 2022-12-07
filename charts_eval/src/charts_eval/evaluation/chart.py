@@ -24,6 +24,9 @@ class Chart:
         if "tools" in chart_dic:
             self.tools = chart_dic["tools"]
 
+    def get_chart_title(self):
+        return "%s / %s %s" % ( self.repo, self.name, self.version )
+
     def _get_chart_name(self, url: str) -> str:
         parts = url.split("/")
         user  = parts[ len(parts) - 1 ]
