@@ -3,7 +3,7 @@
 
 ## Artifact Hub's Helm charts evaluation
 
-Evaluation date: 2022-12-05, 16:13:52
+Evaluation date: 2022-12-07, 18:31:10
 
 [main](./charts_levels)&nbsp; [A(1415)](./charts_levels_a)&nbsp; [B(473)](./charts_levels_b)&nbsp; [C(1009)](./charts_levels_c)&nbsp; [D(424)](./charts_levels_d)&nbsp; [E(233)](./charts_levels_e)&nbsp; [F(273)](./charts_levels_f)&nbsp; [G(552)](./charts_levels_g)&nbsp; [H(240)](./charts_levels_h)&nbsp; [I(228)](./charts_levels_i)&nbsp; [J(181)](./charts_levels_j)&nbsp; [K(440)](./charts_levels_k)&nbsp; [L(235)](./charts_levels_l)&nbsp; [M(400)](./charts_levels_m)&nbsp; [N(203)](./charts_levels_n)&nbsp; [O(481)](./charts_levels_o)&nbsp; [P(468)](./charts_levels_p)&nbsp; [Q(15)](./charts_levels_q)&nbsp; [R(361)](./charts_levels_r)&nbsp; [S(839)](./charts_levels_s)&nbsp; [T(194)](./charts_levels_t)&nbsp; [U(37)](./charts_levels_u)&nbsp; [V(99)](./charts_levels_v)&nbsp; [W(388)](./charts_levels_w)&nbsp; [X(2)](./charts_levels_x)&nbsp; [Y(58)](./charts_levels_y)&nbsp; [Z(30)](./charts_levels_z)&nbsp; 
 
@@ -24,7 +24,7 @@ Evaluation date: 2022-12-05, 16:13:52
 | [camptocamp-secrets](https://camptocamp.github.io/helm-secrets/) | secrets |  |  | 0.3.1 | 1.0 |
 | [camptocamp2](https://camptocamp.github.io/helm-geoserver-cloud) | geoserver |  |  | 0.0.3 | 1.0-RC2 |
 | [camptocamp2](https://camptocamp.github.io/helm-geoserver-cloud) | geoserver-cloud |  |  | 0.0.5 | 1.0-RC3 |
-| [camptocamp2](https://camptocamp.github.io/helm-geoserver-cloud) | geoservercloud |  |  | 0.0.46 | 1.0-RC27 |
+| [camptocamp2](https://camptocamp.github.io/helm-geoserver-cloud) | geoservercloud |  |  | 0.0.6 | 1.0-RC3 |
 | [camptocamp3](https://camptocamp.github.io/charts) | azure-metrics-exporter |  |  | 1.1.5 |  |
 | [camptocamp3](https://camptocamp.github.io/charts) | bivac |  |  | 1.2.0 | 1.0.0 |
 | [camptocamp3](https://camptocamp.github.io/charts) | bivac2 |  |  | 0.1.1 | 2.1 |

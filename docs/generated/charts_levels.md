@@ -4,7 +4,7 @@
 ## Artifact Hub's Helm charts evaluation
 
 Source: [Artifact Hub](https://artifacthub.io/)  
-Evaluation date: 2022-12-05, 16:13:52
+Evaluation date: 2022-12-07, 18:31:10
 
 ### Pod Security Standards (PSS)
 
@@ -13,15 +13,15 @@ Evaluation date: 2022-12-05, 16:13:52
 | Category | Quantity | Percentage |
 |------|------|------|
 | Total | 9278 | 100.0% |
-| Privileged | 517 | 5.57% |
-| Baseline | 3451 | 37.2% |
-| Restricted | 34 | 0.37% |
-| Error_download | 398 | 4.29% |
-| Error_template | 2176 | 23.45% |
-| Empty_no_object | 801 | 8.63% |
-| No_pod_object_but_crd | 1253 | 13.51% |
-| Version_not_evaluable | 491 | 5.29% |
-| No_pod_object | 157 | 1.69% |
+| Privileged | 779 | 8.4% |
+| Baseline | 4806 | 51.8% |
+| Restricted | 42 | 0.45% |
+| Error_download | 408 | 4.4% |
+| Empty_no_object | 187 | 2.02% |
+| Error_template | 1006 | 10.84% |
+| No_pod_object_but_crd | 1340 | 14.44% |
+| No_pod_object | 191 | 2.06% |
+| Version_not_evaluable | 519 | 5.59% |
 
 Legend:
  * PSS level:
@@ -40,21 +40,21 @@ Legend:
 
 | Score | Number of charts |
 |------|------|
-| Non-evaluable | 2574 |
-| Blank score | 785 |
+| Non-evaluable | 1414 |
+| Blank score | 167 |
 | No workload | 0 |
-| Score == 0 | 2199 |
-| [0, -50) | 5600 |
-| [-50, -100) | 217 |
-| [-100, -150) | 67 |
-| [-150, -200) | 16 |
-| [-200, -250) | 8 |
-| [-250, -300) | 6 |
-| [-300, -350) | 2 |
+| Score == 0 | 2538 |
+| [0, -50) | 7175 |
+| [-50, -100) | 383 |
+| [-100, -150) | 85 |
+| [-150, -200) | 26 |
+| [-200, -250) | 14 |
+| [-250, -300) | 7 |
+| [-300, -350) | 3 |
 | [-350, -400) | 1 |
 | [-400, -450) | 1 |
 | [-450, -500) | 0 |
-| [-500, -550) | 0 |
+| [-500, -550) | 1 |
 | [-550, -600) | 0 |
 | [-600, -650) | 0 |
 | [-650, -700) | 1 |
