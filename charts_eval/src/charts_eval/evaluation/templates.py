@@ -50,8 +50,7 @@ def _generate_template( chart: Chart ) -> bool:
             " --version " + chart.version + ' >"' + template + '" 2>>' + log_helm
         gen_template = os.system(command)
     else:
-        print("  Template cached")
-        return False
+        print("  Template cached, skipped")
     # template_data = Path(template).read_text()
     if gen_template > 0 or \
         utils.is_in_file("Use --debug flag to render out invalid YAML", log_helm) or \
@@ -93,7 +92,7 @@ def generate( charts_db_source: dict, charts_db: dict, retry_errors: bool ):
         error = False
         if retry_errors == False:
             if chart.is_error():
-                print("  **Error on previous chart evaluation")
+                print("  **Error on previous chart evaluation, skipping")
                 nerror +=1
                 continue
         else:
@@ -121,6 +120,7 @@ def generate( charts_db_source: dict, charts_db: dict, retry_errors: bool ):
                     template = ""
                     nerror += 1
                 else:
+                    print("  Templated generated")
                     new += 1
 
         # Store chart data
