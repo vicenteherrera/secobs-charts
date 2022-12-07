@@ -1,18 +1,23 @@
 
 .PHONY: all
-all: install download-charts-source generate evaluate postprocess
+all: install prerequisites download-charts-source generate evaluate postprocess
 
 # Preparation --------------------------------------------------------
 
 .PHONY: prerequisites
 prerequisites:
 	jq --version
-	yq version
+	yq --version
 	helm version
+	psa-checker version
+	badrobot version
+	poetry --version
+
 
 .PHONY: install
 install:
 	curl -fsSL https://raw.githubusercontent.com/vicenteherrera/psa-checker/main/install/install.sh | INSTALL_DIR=$(shell go env GOPATH)/bin bash
+	go install github.com/controlplaneio/badrobot@latest
 	poetry install
 	mkdir -p ./result/cache
 

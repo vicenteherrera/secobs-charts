@@ -105,15 +105,15 @@ def _evaluate_badrobot(chart: Chart) -> dict:
 # --------------------------------------------------------------------
 
 def _evaluate_images(chart: Chart) -> dict:
-    template       = chart.status["template_filename"]
+    template     = chart.status["template_filename"]
     log_images   = get_logs_prefix(chart) + "_images.log"
     now = datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
     tool_version = "0.0.1"
     images_data=[]
 
-    error = os.system("cat " + template + " | yq '..|.image? | select(.)' | sort -u > " + log_images )
+    error = os.system('cat "' + template + "\" | yq '..|.image? | select(.)' | sort -u > " + log_images )
     if error == 0:
-        with open(log_images) as f: images = f.readline()
+        with open(log_images) as f: images = f.read()
         for img in images.split("\n"):
             if img != '' and img != '---':
                 images_data.append(img)
