@@ -71,11 +71,10 @@ test-e2e: reset-full
 
 .PHONY: download-result
 download-result:
-	ssh $$ONLINEHOST "cd $$ONLINEPATH ; rm result.tgz ||: ; tar -czvf result.tgz ./result"
-	scp $$ONLINEHOST:$$ONLINEPATH/result.tgz .
-	tar -xzvf result.tgz
-	rm result.tgz
-
+	rm -r ./result ||:
+	mkdir -p ./result
+	echo "scp -C -r $$ONLINEHOST:$$ONLINEPATH/result/ ./result/"
+	ssh $$ONLINEHOST "cd $$ONLINEPATH;tar zc result" | tar zx
 
 # Commit docs ---------------------------------------------------
 
